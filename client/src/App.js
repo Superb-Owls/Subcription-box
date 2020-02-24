@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/LandingPage"
+import LoginSignUp from "./pages/LoginOrSignup"
+import PersonalizedHomePage from "./pages/PersonalizedHomepage"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import Purchase from "./pages/Purchase"
+import Sitemap from "./pages/Sitemap"
+import Tiers from "./pages/Tiers"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/LoginOrSignUp" component={LoginSignUp} />
+          <Route exact path="/Personalized" component={PersonalizedHomePage} />
+          <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} />
+          <Route exact path="/Purchase" component={Purchase} />
+          <Route exact path="/Sitemap" component={Sitemap} />
+          <Route exact path="/Tiers" component={Tiers} />
+          <Route component={NoMatch} />
+        </Switch>
+      </div>
+    </Router>
+  )
 }
 
 export default App;
