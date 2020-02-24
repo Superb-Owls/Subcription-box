@@ -1,0 +1,23 @@
+{
+  "name": "subscription-box",
+  "version": "1.0.0",
+  "description": "Subscription Box Service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Superb-Owls/Subscription-box.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "subscription"
+  ],
+  "author": "Superb Owls",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Superb-Owls/Subscription-box/issues"
+  },
+  "homepage": "https://github.com/Superb-Owls/Subscription-box#readme"
+}
