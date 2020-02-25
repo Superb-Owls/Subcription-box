@@ -134,7 +134,7 @@ module.exports = {
 
   updatePast: function (req, res) {
     db.PastVote
-    findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(404).json(err));
   },
@@ -143,7 +143,47 @@ module.exports = {
       .findById(req.params.id)
       .then(dbModel => dbModel.remove())
       .catch(err => res.status(404).json(err))
+  },
+
+  ///////////////UsersController//////////////
+  findAllUsers: function (req, res) {
+    db.Users
+      .find({})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(404).json(err))
+  },
+  findByIdUser: function (req, res) {
+    db.Users
+      .findById(res.param.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(404).json(err))
+  },
+  createUser: function (req, res) {
+    db.Users
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(404).json(err))
+  },
+  updateUser: function (req, res) {
+    db.Users
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(404).json(err))
+  },
+
+  removeUser: function (req, res) {
+    db.Users
+      .findById(req.params.id)
+      .then(dbModel => remove(dbModel))
+      .catch(err => res.status(404).json(err))
   }
+
+
+
+
+
+
+
 }
 
 
