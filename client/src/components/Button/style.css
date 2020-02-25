@@ -1,0 +1,10 @@
+button{
+    width: 7%;
+    height: 25px;
+    background-color: blue;
+    color: white;
+}
+
+button:hover{
+    border-color: black;
+}

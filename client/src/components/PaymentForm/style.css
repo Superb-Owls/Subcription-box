@@ -1,0 +1,20 @@
+.paymentForm{
+    font-size: medium;
+    font-weight: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input{
+    width: 33%;
+    height: 30px;
+    margin: 15px;
+    /* border-radius: 10%; */
+    /* box-shadow: black; */
+}
+input:hover{
+    border-color: blue;
+}
+
+/* input:focus {
+    background-color: red;
+} */
