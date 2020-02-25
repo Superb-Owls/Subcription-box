@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/LandingPage"
-import LoginSignUp from "./pages/LoginOrSignup"
-import PersonalizedHomePage from "./pages/PersonalizedHomepage"
-import PrivacyPolicy from "./pages/PrivacyPolicy"
-import Purchase from "./pages/Purchase"
-import Sitemap from "./pages/Sitemap"
-import Tiers from "./pages/Tiers"
+// import Home from "./pages/LandingPage"
+// import LoginSignUp from "./pages/LoginOrSignup"
+// import PersonalizedHomePage from "./pages/PersonalizedHomepage"
+// import PrivacyPolicy from "./pages/PrivacyPolicy"
+// import Purchase from "./pages/Purchase"
+// import Sitemap from "./pages/Sitemap"
+// import Tiers from "./pages/tiers"
 import Test from "../src/pages/Test/Test"
 
 
