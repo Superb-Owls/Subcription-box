@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const boxController = require("../../controllers/boxController");
+const controller = require("../../controllers/boxController");
 
 // "/api/box/"
 router.route("/")
-    .get(boxController.findAllBox)
-    .post(boxController.createBox);
+    .get(controller.box.findAll)
+    .post(controller.box.create);
 
 // "/api/box/:id"
 router.route("/:id")
-    .get(boxController.findByIdBox)
-    .put(boxController.updateBox)
-    .delete(boxController.removeBox);
+    .get(controller.box.findById)
+    .put(controller.box.update)
+    .delete(controller.box.remove);
 
 module.exports = router;
