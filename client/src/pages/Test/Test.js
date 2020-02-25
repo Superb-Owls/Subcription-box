@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { Component } from "react";
 import LoginForm from '../../components/LoginForm'
 import SignUpForm from "../../components/SignUpForm"
 import Button from "../../components/Button"
 import PaymentForm from "../../components/PaymentForm"
+import API from "../../utils/marvelAPI"
 
-function Test (){
+class Test extends Component{
+
+    componentDidMount(){
+        this.loadAll()
+    }
+
+    loadAll = () => {
+        API.getHeroes().then((res) =>{
+            console.log(res);
+            
+        })
+    }
+    
+    render(){
     return (
         <>
         <LoginForm/>
@@ -13,5 +27,6 @@ function Test (){
         <PaymentForm/>
         </>
     )
+    }
 }
 export default Test;
