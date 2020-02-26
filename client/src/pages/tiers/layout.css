@@ -1,0 +1,52 @@
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    /* background-image: linear-gradient(to bottom right, red, maroon); */
+    background-image: url("https://www.psdgraphics.com/file/halftone-pattern.gif");
+    background-size: cover;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 20% 35% 35%;
+    grid-template-areas: 
+      "title title title title title title"
+      "tier1 tier1 tier1 tier2 tier2 tier2"
+      "hero1 hero2 hero3 hero4 hero5 hero6"
+      "comic1 comic2 comic3 comic4 comic5 buy";
+  }
+  .title{
+      grid-area: title;
+      background-color: green;
+      text-align: center;
+      font-size: 30px;
+  }
+  .tier1{
+      grid-area: tier1;
+      color: white;
+      border: white solid 5px;
+      animation: explode .25s;
+      background-image: url("./tier\ 1.png");
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  @keyframes explode{
+      from{
+          transform: scale(0);
+      }
+      to{
+          transform: scale(1)
+      }
+  }
+
+  .tier2{
+      grid-area: tier2;
+      color: white;
+      border: white solid 5px;
+      animation: explode .25s;
+      background-image: url("./tier\ 2.png");
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+ .hero-choices {
+      grid-area: hero-choices;
+     display: inline;
+  }
