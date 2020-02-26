@@ -5,7 +5,8 @@
         "shadowimage": "https://i.imgur.com/hDSRufS.jpg",
         "gif": "https://i.imgur.com/oLitMXo.gif",
         "grid-name": "hero1",
-        "show-collapsible": "show-spiderman"
+        "show-collapsible": false,
+        "comics": []
     },
     {
         "index": 2,
@@ -13,7 +14,7 @@
         "shadowimage": "https://i.imgur.com/rVUq9ZY.jpg",
         "gif": "https://i.imgur.com/xGIyJmK.gif",
         "grid-name": "hero2",
-        "show-collapsible": "show-captain-america"
+        "show-collapsible": false
     },
     {
         "index": 3,
@@ -21,7 +22,7 @@
         "shadowimage": "https://i.imgur.com/6qcdboG.jpg",
         "gif": "https://i.imgur.com/O9NdTte.gif",
         "grid-name": "hero3",
-        "show-collapsible": "show-thor"
+        "show-collapsible": false
     },
     {
         "index": 4,
@@ -29,7 +30,7 @@
         "shadowimage": "https://i.imgur.com/kCIUW93.jpg",
         "gif": "https://i.imgur.com/s8UkdZB.gif",
         "grid-name": "hero4",
-        "show-collapsible": "show-iron-man"
+        "show-collapsible": false
     },
     {
         "index": 5,
@@ -37,7 +38,7 @@
         "shadowimage": "https://i.imgur.com/7b3B5wC.jpg",
         "gif": "https://i.imgur.com/9cm3JUT.gif",
         "grid-name": "hero5",
-        "show-collapsible": "show-hulk"
+        "show-collapsible": false
     },
     {
         "index": 6,
@@ -45,6 +46,6 @@
         "shadow-image": "https://i.imgur.com/C70GV5H.jpg",
         "gif": "https://i.imgur.com/b6nDuco.gif",
         "grid-name": "hero6",
-        "show-collapsible": "show-wolverine"
+        "show-collapsible": false
     }
 ]
