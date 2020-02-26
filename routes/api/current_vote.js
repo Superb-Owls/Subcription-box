@@ -1,14 +1,14 @@
 const router = require("express").Router();
-const currentController = require("../../controllers/boxController");
+const controller = require("../../controllers/boxController");
 
 router.route("/")
-    .get(currentController.findAllCurrent)
-    .post(currentController.createCurrent)
+    .get(controller.current.findAll)
+    .post(controller.current.create)
 
 
 router.route("/:id")
-    .get(currentController.findByIdCurrent)
-    .put(currentController.updateCurrent)
-    .delete(currentController.removeCurrent)
+    .get(controller.current.findById)
+    .put(controller.current.update)
+    .delete(controller.current.remove)
 
 module.exports = router

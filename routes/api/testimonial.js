@@ -1,14 +1,14 @@
 const router = require("express").Router();
-const testimonialController = require("../../controllers/boxController");
+const controller = require("../../controllers/boxController");
 
 router.route("/")
-    .get(testimonialController.findAllTestimonial)
-    .post(testimonialController.createTestimonial)
+    .get(controller.testimonial.findAll)
+    .post(controller.testimonial.create)
 
 
 router.route("/:id")
-    .get(testimonialController.findByIdTestimonial)
-    .put(testimonialController.updateTestimonial)
-    .delete(testimonialController.removeTestimonial)
+    .get(controller.testimonial.findById)
+    .put(controller.testimonial.update)
+    .delete(controller.testimonial.remove)
 
 module.exports = router
