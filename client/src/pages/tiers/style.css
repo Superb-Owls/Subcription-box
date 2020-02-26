@@ -1,0 +1,62 @@
+.heroCard{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    
+    display: block;
+}
+.hoverImage{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-size: cover;
+    background-position: center;
+    border: white 1px solid;
+}
+.heroCard:hover .hoverImage {
+    opacity: 1;
+    cursor: pointer;
+  }
+.hero1{
+    background-position: right;
+    background-image: url("https://i.imgur.com/hDSRufS.jpg");  
+}
+.hover1{
+    background-image: url("https://i.imgur.com/oLitMXo.gif");
+}
+.hero2{
+    background-image: url("https://i.imgur.com/rVUq9ZY.jpg");
+}
+.hover2{
+    background-image: url("https://i.imgur.com/xGIyJmK.gif");
+}
+.hero3{
+    background-image: url("https://i.imgur.com/6qcdboG.jpg");
+}
+.hover3{
+    background-image: url("https://i.imgur.com/O9NdTte.gif");
+}
+.hero4{
+    background-image: url("https://i.imgur.com/kCIUW93.jpg");
+}
+.hover4{
+    background-image: url("https://i.imgur.com/s8UkdZB.gif");
+}
+.hero5{
+    background-image: url("https://i.imgur.com/7b3B5wC.jpg");
+    background-position: bottom;
+}
+.hover5{
+    background-image: url("https://i.imgur.com/9cm3JUT.gif");
+}
+.hero6{
+    background-image: url("https://i.imgur.com/C70GV5H.jpg");
+}
+.hover6{
+    background-image: url("https://i.imgur.com/b6nDuco.gif");
+}
+
+
+
