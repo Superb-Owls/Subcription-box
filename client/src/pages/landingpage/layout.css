@@ -1,0 +1,28 @@
+.container-land {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 32% 68%;
+    grid-template-areas: 
+      "pic1 video video video pic2"
+      "main main main main main";
+  }
+  .pic1{
+      grid-area: pic1;
+      background-color: thistle;
+      border: white solid 3px;
+  }
+  .pic2{
+      grid-area: pic2;
+      background-color: yellow;
+      border: white solid 3px;
+  }
+  .video{
+      grid-area: video;
+      background-color: white;
+  }
+  .main{
+      grid-area: main;
+      background-color: violet;
+  }
