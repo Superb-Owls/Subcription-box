@@ -5,7 +5,34 @@
         "shadowimage": "https://i.imgur.com/hDSRufS.jpg",
         "gif": "https://i.imgur.com/oLitMXo.gif",
         "grid-name": "hero1",
-        "show-collapsible": "show-spiderman"
+        "show-collapsible": false,
+        "comics": [
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/c/50/57aa2d678be0d/portrait_xlarge.jpg",
+                "title": "The Amazing Spider-Man (1963) #129",
+                "gridSpot": "comic1"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/537e08e70a9dd/portrait_xlarge.jpg",
+                "title": "The Amazing Spider-Man (1963) #43",
+                "gridSpot": "comic2"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/e/70/57a0cce2aa7c0/portrait_xlarge.jpg",
+                "title": "The Amazing Spider-Man (1963) #39",
+                "gridSpot": "comic3"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/e/b0/57b7694649690/portrait_xlarge.jpg",
+                "title": "The Amazing Spider-Man (1963) #33",
+                "gridSpot": "comic4"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/b/03/57aa238855274/portrait_xlarge.jpg",
+                "title": "The Amazing Spider-Man (1963) #50",
+                "gridSpot": "comic5"
+            }
+        ]
     },
     {
         "index": 2,
@@ -13,7 +40,34 @@
         "shadowimage": "https://i.imgur.com/rVUq9ZY.jpg",
         "gif": "https://i.imgur.com/xGIyJmK.gif",
         "grid-name": "hero2",
-        "show-collapsible": "show-captain-america"
+        "show-collapsible": false,
+        "comics": [
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/7/80/5266c6ee8f955/portrait_xlarge.jpg",
+                "title": "Captain America (1968) #284",
+                "gridSpot": "comic1"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/4/70/52616fd9d3897/portrait_xlarge.jpg",
+                "title": "Captain America (1968) #402",
+                "gridSpot": "comic2"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/f/60/4bb5fbd17ee28/portrait_xlarge.jpg",
+                "title": "Captain America (1968) #117",
+                "gridSpot": "comic3"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/56e6d8c040c58/portrait_xlarge.jpg",
+                "title": "Captain America (1968) #383",
+                "gridSpot": "comic4"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/30/50acf5f842703/portrait_xlarge.jpg",
+                "title": "Captain America (1968) #344",
+                "gridSpot": "comic5"
+            }
+        ]
     },
     {
         "index": 3,
@@ -21,7 +75,34 @@
         "shadowimage": "https://i.imgur.com/6qcdboG.jpg",
         "gif": "https://i.imgur.com/O9NdTte.gif",
         "grid-name": "hero3",
-        "show-collapsible": "show-thor"
+        "show-collapsible": false,
+        "comics": [
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/5a83133fa0008/portrait_xlarge.jpg",
+                "title": "Journey Into Mystery (1952) #83",
+                "gridSpot": "comic1"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/4bb5823c43457/portrait_xlarge.jpg",
+                "title": "Thor (1966) #396",
+                "gridSpot": "comic2"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/3/80/4f63531a606e9/portrait_xlarge.jpg",
+                "title": "Thor (1966) #168",
+                "gridSpot": "comic3"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/d0/4f634ad27b759/portrait_xlarge.jpg",
+                "title": "Thor (1966) #171",
+                "gridSpot": "comic4"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/7/20/4f63557dc95d4/portrait_xlarge.jpg",
+                "title": "Thor (1966) #380 ",
+                "gridSpot": "comic5"
+            }
+        ]
     },
     {
         "index": 4,
@@ -29,7 +110,34 @@
         "shadowimage": "https://i.imgur.com/kCIUW93.jpg",
         "gif": "https://i.imgur.com/s8UkdZB.gif",
         "grid-name": "hero4",
-        "show-collapsible": "show-iron-man"
+        "show-collapsible": false,
+        "comics": [
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/5b5f3df320d99/portrait_xlarge.jpg",
+                "title": "Iron Man (1968) #232",
+                "gridSpot": "comic1"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/c/b0/52c5a3e5aff88/portrait_xlarge.jpg",
+                "title": "Iron Man (1968) #69",
+                "gridSpot": "comic2"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/30/50b40ae79f470/portrait_xlarge.jpg",
+                "title": "Iron Man (1968) #237",
+                "gridSpot": "comic3"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/c/80/5a6763f8bce2a/portrait_xlarge.jpg",
+                "title": "Iron Man (1968) #216",
+                "gridSpot": "comic4"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/50ad44d694af8/portrait_xlarge.jpg",
+                "title": "Iron Man (1968) #234",
+                "gridSpot": "comic5"
+            }
+        ]
     },
     {
         "index": 5,
@@ -37,7 +145,34 @@
         "shadowimage": "https://i.imgur.com/7b3B5wC.jpg",
         "gif": "https://i.imgur.com/9cm3JUT.gif",
         "grid-name": "hero5",
-        "show-collapsible": "show-hulk"
+        "show-collapsible": false,
+        "comics": [
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/b/80/4bc46b6a00de2/portrait_xlarge.jpg",
+                "title": "Incredible Hulk (1962) #464",
+                "gridSpot": "comic1"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/a/10/5b69ac3a789e5/portrait_xlarge.jpg",
+                "title": "Incredible Hulk (1962) #447",
+                "gridSpot": "comic2"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/7/00/5b92c1f95639c/portrait_xlarge.jpg",
+                "title": "Hulk (1999) #60",
+                "gridSpot": "comic3"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/a/00/5376563e7dedc/portrait_xlarge.jpg",
+                "title": "Hulk (1999) #64",
+                "gridSpot": "comic4"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/c/40/4f7dcdf1d6033/portrait_xlarge.jpg",
+                "title": "Hulk (2008) #50 (Simonson Variant)",
+                "gridSpot": "comic5"
+            }
+        ]
     },
     {
         "index": 6,
@@ -45,6 +180,33 @@
         "shadow-image": "https://i.imgur.com/C70GV5H.jpg",
         "gif": "https://i.imgur.com/b6nDuco.gif",
         "grid-name": "hero6",
-        "show-collapsible": "show-wolverine"
+        "show-collapsible": false,
+        "comics": [
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/f/03/5372a99d06736/portrait_xlarge.jpg",
+                "title": "Uncanny X-Men (1963) #141",
+                "gridSpot": "comic1"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/5/70/50b4031c7e4d0/portrait_xlarge.jpg",
+                "title": "Uncanny X-Men (1963) #133",
+                "gridSpot": "comic2"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/58ae01fb69095/portrait_xlarge.jpg",
+                "title": "Uncanny X-Men (1963) #251",
+                "gridSpot": "comic3"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/3/60/4c36286138f1b/portrait_xlarge.jpg",
+                "title": "Uncanny X-Men (1963) #207",
+                "gridSpot": "comic4"
+            },
+            {
+                "image": "http://i.annihil.us/u/prod/marvel/i/mg/2/f0/51141692b7b5a/portrait_xlarge.jpg",
+                "title": "Uncanny X-Men (1963) #268",
+                "gridSpot": "comic5"
+            }
+        ]
     }
 ]

@@ -11,11 +11,8 @@ class Test extends Component {
     }
 
     componentDidMount() {
-        console.log(marvelHeroes)
         this.loadAll()
-
     }
-
     loadAll = () => {
         // var spiderMan = 1009610
         // var hulk = 1016823
@@ -24,7 +21,7 @@ class Test extends Component {
         // var wolverine = 1009718
         // var ironman = 1009368
 
-        // this is cap?
+        // this is thor
         marvelHeroes(thor).then((res) => {
             console.log(res);
             let currData = this.state.data;
@@ -32,7 +29,6 @@ class Test extends Component {
             this.setState({
                 data: currData
             })
-
         })
     }
 
