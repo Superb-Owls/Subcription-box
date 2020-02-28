@@ -1,8 +1,13 @@
-import React from 'react';
-import { useMemo } from "react";
-import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
-// import { loadStripe } from '@stripe/stripe-js';
-import useResponsiveFontSize from './UseResponsiveFontSize';
+import React, { useMemo } from "react";
+import {
+  useStripe,
+  useElements,
+  CardNumberElement,
+  CardCvcElement,
+  CardExpiryElement
+} from "@stripe/react-stripe-js";
+
+import useResponsiveFontSize from "./UseResponsiveFontSize";
 
 const useOptions = () => {
   const fontSize = useResponsiveFontSize();
@@ -45,29 +50,64 @@ const PaymentForm = () => {
 
     const payload = await stripe.createPaymentMethod({
       type: "card",
-      card: elements.getElement(CardElement)
+      card: elements.getElement(CardNumberElement)
     });
-
     console.log("[PaymentMethod]", payload);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Card detailssss
-        <CardElement
+        Card number
+        <CardNumberElement
           options={options}
           onReady={() => {
-            console.log("CardElement [ready]");
+            console.log("CardNumberElement [ready]");
           }}
           onChange={event => {
-            console.log("CardElement [change]", event);
+            console.log("CardNumberElement [change]", event);
           }}
           onBlur={() => {
-            console.log("CardElement [blur]");
+            console.log("CardNumberElement [blur]");
           }}
           onFocus={() => {
-            console.log("CardElement [focus]");
+            console.log("CardNumberElement [focus]");
+          }}
+        />
+      </label>
+      <label>
+        Expiration date
+        <CardExpiryElement
+          options={options}
+          onReady={() => {
+            console.log("CardNumberElement [ready]");
+          }}
+          onChange={event => {
+            console.log("CardNumberElement [change]", event);
+          }}
+          onBlur={() => {
+            console.log("CardNumberElement [blur]");
+          }}
+          onFocus={() => {
+            console.log("CardNumberElement [focus]");
+          }}
+        />
+      </label>
+      <label>
+        CVC
+        <CardCvcElement
+          options={options}
+          onReady={() => {
+            console.log("CardNumberElement [ready]");
+          }}
+          onChange={event => {
+            console.log("CardNumberElement [change]", event);
+          }}
+          onBlur={() => {
+            console.log("CardNumberElement [blur]");
+          }}
+          onFocus={() => {
+            console.log("CardNumberElement [focus]");
           }}
         />
       </label>
@@ -77,6 +117,5 @@ const PaymentForm = () => {
     </form>
   );
 };
-
 
 export default PaymentForm;

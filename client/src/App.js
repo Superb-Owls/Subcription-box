@@ -6,13 +6,9 @@ import PersonalizedHomePage from "./pages/personalizedhomepage"
 import PrivacyPolicy from "./pages/privacypolicy"
 import Purchase from "./pages/purchase"
 import Navbar from './components/Navbar'
-
-import { loadStripe } from '@stripe/stripe-js';
-
 import Tiers from "./pages/tiers"
 
 
-const stripePromise = loadStripe("pk_test_Pn2QWutVhjdDrcFaKWDoM5DJ00ZLEeus2G");
 
 
 function App() {
