@@ -4,13 +4,32 @@ import './style.css'
 import data from './heroinfo.json'
 
 function TiersContainer() {
+    // state = {
+    //     herosArray: data,
+    //     showCollapsible: false,
+    //     targetCollapsible: "",
+    //     targetIndex: null
+    // }
 
-    const [state, setState] = useState({ herosArray: data, firstName: '', lastName: '' });
+    const [state, setState] = useState({ herosArray: data, firstName: '', lastName: '', descriptionIndex: '' });
+
+    function showDescription(i) {
+        console.log('SHOW DESCRIPTION')
+        setState({ ...state, descriptionIndex: i })
+
+    }
+
+    function hideDescription(i) {
+        console.log('HIDE DESCRIPTION')
+        setState({ ...state, descriptionIndex: '' })
+    }
 
     //this component has a shared context between row 1 and 2 with showCollapsible, setCollapsible?
     function handleClick(e, heroName) {
         e.preventDefault();
-
+        // paul
+        // this.setState({ targetCollapsible: heroName, showCollapsible: true, targetIndex: e.target.index })
+        //
         var newState = state.herosArray
         newState.map((hero) => {
             if (hero.name === heroName) {
@@ -24,22 +43,32 @@ function TiersContainer() {
         setState({ ...state, herosArray: newState })
 
     }
-    function setCollapsible() {
-
-    }
     let comics = []
+    console.log('this is the staet', state)
     return (
         <>
-
-            {state.herosArray.map((hero, i) => {
+            {state.herosArray.map((hero, comic, i) => {
 
                 if (hero['show-collapsible']) {
-                    var comicsGrid = ["comic1", "comic2", "comic3", "comic4", "comic5"]
-                    comicsGrid.map((gridPlace) => {
+                    hero.comics.map((comic, i) => {
                         const html = (
 
-                            <div className={gridPlace} style={{ backgroundColor: 'red' }}>
-                                <h1>{hero.name}</h1>
+
+                            <div onMouseLeave={() => { hideDescription(i) }} onMouseEnter={() => { showDescription(i) }} className={comic.gridSpot} style={{
+                                color: 'white',
+                                backgroundImage: `url(${comic.image})`,
+                                backgroundSize: 'cover',
+
+                            }}>
+
+                                {state.descriptionIndex === i ? (<div style={{
+                                    backgroundColor: 'grey',
+                                    height: "100%",
+                                    width: '100%',
+                                }}>
+                                    <h1>{comic.title}</h1>
+                                </div>) : ''}
+
 
                             </div>
                         )

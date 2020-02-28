@@ -5,6 +5,7 @@ import LoginSignUp from "./pages/loginorsignup"
 import PersonalizedHomePage from "./pages/personalizedhomepage"
 import PrivacyPolicy from "./pages/privacypolicy"
 import Purchase from "./pages/purchase"
+import Navbar from './components/Navbar'
 
 import { loadStripe } from '@stripe/stripe-js';
 
@@ -18,7 +19,7 @@ function App() {
   return (
     <Router>
       <div>
-
+        <Navbar></Navbar>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/LoginOrSignUp" component={LoginSignUp} />
