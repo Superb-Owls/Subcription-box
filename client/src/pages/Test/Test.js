@@ -5,28 +5,28 @@ import Button from "../../components/Button"
 import PaymentForm from "../../components/PaymentForm"
 import API from "../../utils/marvelAPI"
 
-class Test extends Component{
+class Test extends Component {
 
-    componentDidMount(){
+    componentDidMount() {
         this.loadAll()
     }
 
     loadAll = () => {
-        API.getHeroes().then((res) =>{
+        API.getHeroes().then((res) => {
             console.log(res);
-            
+
         })
     }
-    
-    render(){
-    return (
-        <>
-        <LoginForm/>
-        <Button/>
-        <SignUpForm/>
-        <PaymentForm/>
-        </>
-    )
+
+    render() {
+        return (
+            <>
+                <LoginForm />
+                <Button />
+                <SignUpForm />
+                <PaymentForm />
+            </>
+        )
     }
 }
 export default Test;

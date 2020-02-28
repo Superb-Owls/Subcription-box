@@ -6,8 +6,9 @@ import PersonalizedHomePage from "./pages/personalizedhomepage"
 import PrivacyPolicy from "./pages/privacypolicy"
 import Purchase from "./pages/purchase"
 import Navbar from './components/Navbar'
-
 import Tiers from "./pages/tiers"
+
+
 
 
 function App() {
