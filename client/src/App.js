@@ -6,7 +6,12 @@ import PersonalizedHomePage from "./pages/personalizedhomepage"
 import PrivacyPolicy from "./pages/privacypolicy"
 import Purchase from "./pages/purchase"
 
+import { loadStripe } from '@stripe/stripe-js';
+
 import Tiers from "./pages/tiers"
+
+
+const stripePromise = loadStripe("pk_test_Pn2QWutVhjdDrcFaKWDoM5DJ00ZLEeus2G");
 
 
 function App() {
@@ -20,9 +25,7 @@ function App() {
           <Route exact path="/Personalized" component={PersonalizedHomePage} />
           <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} />
           <Route exact path="/Purchase" component={Purchase} />
-
           <Route exact path="/Tiers" component={Tiers} />
-
         </Switch>
       </div>
     </Router>

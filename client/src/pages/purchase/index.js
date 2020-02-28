@@ -1,20 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-
-import CheckoutForm from '../../components/CheckoutForm';
+import PaymentForm from '../../components/PaymentForm';
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe("pk_test_Pn2QWutVhjdDrcFaKWDoM5DJ00ZLEeus2G");
 
-function App() {
+function Purchase() {
     return (
         <Elements stripe={stripePromise}>
-            <CheckoutForm />
+            <PaymentForm />
         </Elements>
     );
 };
-
-ReactDOM.render(<App />, document.getElementById('root'));
+export default Purchase;

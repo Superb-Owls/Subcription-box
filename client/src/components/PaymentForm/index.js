@@ -1,7 +1,7 @@
 import React from 'react';
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
-
+// import { loadStripe } from '@stripe/stripe-js';
 import useResponsiveFontSize from './UseResponsiveFontSize';
 
 const useOptions = () => {
@@ -29,7 +29,7 @@ const useOptions = () => {
   return options;
 };
 
-const CardForm = () => {
+const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
@@ -54,7 +54,7 @@ const CardForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Card details
+        Card detailssss
         <CardElement
           options={options}
           onReady={() => {
@@ -78,4 +78,5 @@ const CardForm = () => {
   );
 };
 
-export default CardForm;
+
+export default PaymentForm;
