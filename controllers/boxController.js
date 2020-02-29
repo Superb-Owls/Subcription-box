@@ -33,7 +33,7 @@ class Controller {
     this.remove = (req, res) => {
       db[database]
         .findById(req.params.id)
-        .then(bdModel => dbModel.remove())
+        .then(dbModel => dbModel.remove())
         .catch(err => res.status(404).json(err));
     }
   }
@@ -46,5 +46,4 @@ module.exports = {
   user: new Controller('Users'),
   subscription: new Controller('Subscriptions'),
   testimonial: new Controller('Testimonial'),
-
 }

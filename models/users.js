@@ -24,7 +24,7 @@ const UserSchema = new Schema({
 
   DOB: {
     type: Date
-},
+  },
 
   userCreated: {
     type: Date,

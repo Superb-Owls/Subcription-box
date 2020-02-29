@@ -4,11 +4,17 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.0.3",
+    "@stripe/stripe-js": "^1.0.2",
     "axios": "^0.18.0",
+    "marvel-api-hash-generator": "^1.0.3",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "util.promisify": "^1.0.1"
+    "stripe": "^8.23.0"
+
   },
   "scripts": {
     "start": "react-scripts start",

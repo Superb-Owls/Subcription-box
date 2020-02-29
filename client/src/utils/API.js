@@ -1,4 +1,5 @@
 import axios from "axios";
+import marvel from './marvelAPI';
 
 // "/box" --> boxRoutes;
 // "/testimonial" --> testimonialRoutes;
@@ -27,6 +28,7 @@ export default {
     past: new ApiFront("pastvote"),
     user: new ApiFront("user"),
     subscription: new ApiFront("subscription"),
-    testimonial: new ApiFront("testimonial")
+    testimonial: new ApiFront("testimonial"),
+    marvel: marvel
 }
 
