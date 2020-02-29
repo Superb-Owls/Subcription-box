@@ -1,0 +1,25 @@
+.test1{
+    border: white 3px solid;
+    width: 50%;
+    height: 100%;
+}
+.speech{
+    height: 360px;
+    width: 360px;
+    margin-left: -710px;
+    top: -110px;
+    position: relative;
+}
+.quote{
+    font-family: 'Permanent Marker';
+    font-size: 20px;
+    position: relative;
+    margin-top: -400px;
+    margin-left: 50px;
+}
+.name{
+    position: relative;
+    margin-left: 50px;
+    font-family: 'Permanent Marker';
+    font-size: 12px;
+}

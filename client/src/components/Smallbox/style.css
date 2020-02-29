@@ -1,0 +1,11 @@
+.smallimg{
+    flex-grow: 1;
+    border: white solid 3px;
+    position: relative;
+    padding:auto;
+}
+.smallimg > img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}

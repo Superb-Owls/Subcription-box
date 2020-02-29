@@ -3,10 +3,14 @@
     height: 100vh;
     width: 100vw;
     grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
-    grid-template-rows: 32% 68%;
+    grid-template-rows: 32% 22% 70% 82% 62%;
     grid-template-areas: 
       "pic1 video video video pic2"
-      "main main main main main";
+      "pic1 title title title pic2"
+      "logo logo logo logo logo"
+      "desc desc desc desc desc"
+      "test test test test test"
+      
   }
   .pic1{
       grid-area: pic1;
@@ -21,8 +25,24 @@
   .video{
       grid-area: video;
       background-color: white;
+      border: white solid 3px;
   }
-  .main{
-      grid-area: main;
+  .titlelanding{
+      grid-area: title;
       background-color: violet;
+      border: white solid 3px;
+  }
+  .logolanding{
+    grid-area: logo;
+    background-color: tomato;
+    border: white solid 3px;
+  }
+  .testimonial{
+      grid-area: test;
+      background-color: yellowgreen;
+      border: white solid 3px;
+  }
+  .description{
+      grid-area: desc;
+      background-color: navy;
   }
