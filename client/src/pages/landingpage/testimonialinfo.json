@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.imgur.com/PVcSFbu.png",
+        "speechtext1": "I love having my",
+        "speechtext2": "favorite comics delivered",
+        "speechtext3": "to my door every month!",
+        "name": "Catherine J. - Charleston, SC"
+    },
+    {
+        "id": 2,
+        "img": "https://i.imgur.com/K7AIJsD.png",
+        "speechtext1": "Hero Box has ",
+        "speechtext2": "transformed the way I ",
+        "speechtext3": "read my comic books.",
+        "name": "James P. - Portland, OR"
+    }
+]
