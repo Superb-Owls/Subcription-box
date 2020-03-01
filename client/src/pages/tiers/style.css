@@ -1,9 +1,8 @@
 .heroCard{
-    height: 100%;
+    height: 275%;
     width: 100%;
     background-size: cover;
-    
-    display: block;
+   
 }
 .hoverImage{
     position: relative;

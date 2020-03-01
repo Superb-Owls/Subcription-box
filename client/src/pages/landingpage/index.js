@@ -3,6 +3,7 @@ import './layout.css'
 import './style.css'
 import Testimonial from '../../components/Testimonial'
 import Description from '../../components/Description'
+import testinfo from './testimonialinfo.json'
 
 function LandingPage() {
     return (
@@ -24,8 +25,24 @@ function LandingPage() {
             <div className="description">
                 <Description />
             </div>
-            <div className="testimonial">
-                <Testimonial />
+            <div className="testimonial1">
+                <Testimonial
+                    img={testinfo[0].img}
+                    speechimg={testinfo[0].speechimg}
+                    name={testinfo[0].name}
+                    speechtext1={testinfo[0].speechtext1}
+                    speechtext2={testinfo[0].speechtext2}
+                    speechtext3={testinfo[0].speechtext3} />
+            </div>
+            <div className="testimonial2">
+                <Testimonial
+                    img={testinfo[1].img}
+                    speechimg={testinfo[1].speechimg}
+                    name={testinfo[1].name}
+                    speechtext1={testinfo[1].speechtext1}
+                    speechtext2={testinfo[1].speechtext2}
+                    speechtext3={testinfo[1].speechtext3}
+                />
             </div>
 
         </div>

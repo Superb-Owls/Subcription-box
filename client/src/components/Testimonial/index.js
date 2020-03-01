@@ -2,13 +2,21 @@ import React from 'react';
 import './style.css'
 
 
-function Testimonial() {
+function Testimonial(props) {
+    const img = props.img;
+    const name = props.name;
+    const text1 = props.speechtext1;
+    const text2 = props.speechtext2;
+    const text3 = props.speechtext3;
+
     return (
         <>
-            <img className="test1" src="https://i.imgur.com/xsSgEhY.jpg"></img>
-            <img className="speech" src="https://i.imgur.com/eFybDAc.png?1"></img>
-            <p className="quote">I love having my <br /> favorite comics delivered <br /> to my door every month!</p>
-            <p className="name">Catherine Jones - Charleston, SC</p>
+            <div className="testwrapper">
+                <img className="test" src={img}></img>
+                <p className="quote">{text1}<br />{text2}<br />{text3}</p>
+                <p className="name">{name}</p>
+            </div>
+
 
         </>
     )

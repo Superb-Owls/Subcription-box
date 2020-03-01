@@ -3,13 +3,13 @@
     height: 100vh;
     width: 100vw;
     grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
-    grid-template-rows: 30% 30% 100% 82% 62%;
+    grid-template-rows: 30% 30% 100% 110% 50%;
     grid-template-areas: 
       "pic1 logo logo logo pic2"
       "pic1 logo logo logo pic2"
       "tag tag tag tag tag"
       "desc desc desc desc desc"
-      "test test test test test"
+      "test1 test1 . test2 test2"
       
   }
   .pic1{
@@ -42,11 +42,16 @@
     background-color: tomato;
     border: white solid 3px;
   }
-  .testimonial{
-      grid-area: test;
+  .testimonial1{
+      grid-area: test1;
       background-color: yellowgreen;
       border: white solid 3px;
   }
+  .testimonial2{
+    grid-area: test2;
+    background-color: khaki;
+    border: white solid 3px;
+}
   .description{
       grid-area: desc;
       background-color: navy;
