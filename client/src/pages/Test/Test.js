@@ -35,10 +35,10 @@ class Test extends Component {
     render() {
         return (
             <>
-                <LoginForm />
+                {/* <LoginForm /> */}
                 <Button />
-                <SignUpForm />
-                <PaymentForm />
+                {/* <SignUpForm /> */}
+                {/* <PaymentForm /> */}
             </>
         )
     }

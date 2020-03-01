@@ -1,9 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css'
 // import HeroCard from '../HeroCard'
 import data from './heroinfo.json'
+import { marvelHeroes } from "../../utils/marvelRd2"
 
 function TiersContainer() {
+
+    useEffect(() => {
+        var thor = 1009664
+        var wolverine = 1009718
+        var ironman = 1009368
+        var spiderMan = 1009610
+        var hulk = 1009351
+        var captainAmerica = 1009220
+
+        marvelHeroes(thor).then((res) => {
+            var thorData = res
+            console.log("This is Thor:", thorData)
+        })
+        marvelHeroes(wolverine).then((res) => {
+            var wolverineData = res
+            console.log("This is wolverine:", wolverineData)
+        })
+        marvelHeroes(ironman).then((res) => {
+            var ironmanData = res
+            console.log("This is Ironman:", ironmanData)
+        })
+        marvelHeroes(spiderMan).then((res) => {
+            var spiderManData = res
+            console.log("This is Spiderman:", spiderManData)
+        })
+        marvelHeroes(hulk).then((res) => {
+            var hulkData = res
+            console.log("This is Hulk:", hulkData)
+        })
+        marvelHeroes(captainAmerica).then((res) => {
+            var captainAmericaData = res
+            console.log("This is captainAmerica:", captainAmericaData)
+        })
+    })
+
     // state = {
     //     herosArray: data,
     //     showCollapsible: false,
