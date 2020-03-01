@@ -8,6 +8,7 @@ import Purchase from "./pages/purchase"
 import Test from './pages/Test/Test'
 import Navbar from './components/Navbar'
 import Tiers from "./pages/tiers"
+import About from './pages/about'
 
 
 
@@ -28,6 +29,7 @@ function App() {
 
 
           <Route exact path="/Tiers" component={Tiers} />
+          <Route exact path="/About" component={About} />
         </Switch>
       </div>
     </Router>
