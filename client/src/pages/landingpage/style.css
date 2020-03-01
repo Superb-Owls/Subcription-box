@@ -1,0 +1,33 @@
+.pic1{
+    background-image: url("https://i.imgur.com/ylvGZdJ.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+.pic2{
+    background-image: url("https://i.imgur.com/U3Xdj0U.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.titlelanding{
+    font-size: 70px;
+    text-align: center;
+}
+.logolanding > img{
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+.tagline > img{
+    width: 100%;
+    display: flex;
+}
+.tagline > p{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Permanent Marker';
+    
+}
+.tagline{
+    /* position: relative; */
+}

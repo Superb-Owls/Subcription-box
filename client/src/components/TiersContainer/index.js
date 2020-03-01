@@ -65,8 +65,13 @@ function TiersContainer() {
                                     backgroundColor: 'grey',
                                     height: "100%",
                                     width: '100%',
+                                    opacity: 0.4
                                 }}>
-                                    <h1>{comic.title}</h1>
+                                    <h1 style={{
+                                        margin: '0px',
+                                        opacity: 1
+
+                                    }}>{comic.title}</h1>
                                 </div>) : ''}
 
 
