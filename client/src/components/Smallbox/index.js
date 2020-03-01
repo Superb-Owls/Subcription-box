@@ -1,11 +1,12 @@
 import React from 'react';
 import './style.css'
 
-function Smallbox() {
+function Smallbox(props) {
+    const img = props.img
     return (
         <>
             <div className="smallimg">
-                <img src="https://i.imgur.com/nwbM3ws.jpg"></img>
+                <img src={img}></img>
             </div>
         </>
     )
