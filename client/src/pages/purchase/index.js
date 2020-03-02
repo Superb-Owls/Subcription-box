@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import PaymentForm from '../../components/PaymentForm/index';
@@ -15,15 +15,52 @@ import OrderTotal from '../../components/OrderTotal'
 const stripePromise = loadStripe("pk_test_Pn2QWutVhjdDrcFaKWDoM5DJ00ZLEeus2G");
 
 function Purchase() {
+
+    const [state, setState] = useState({
+        shipping: {
+            firstname: '',
+            lastname: '',
+            address1: '',
+            address2: '',
+            city: '',
+            state: '',
+            zip: ''
+        },
+        billing: {
+            firstname: '',
+            lastname: '',
+            address1: '',
+            address2: '',
+            city: '',
+            state: '',
+            zip: ''
+        }
+    })
+
+    const handleTyping = (e, formType) => {
+        console.log('u r typing!!', e.target.value, e.target.name, formType)
+        // setState({ ...state, state[formType][e.target.name]: e.target.value })
+
+        let newState = state[formType]
+        newState[e.target.name] = e.target.value
+
+        setState({
+            ...state, [formType]: newState
+        })
+    }
+
+
+    console.log('this is our state!!!', state);
+
     return (
         <div className="paymentWrapper">
             <div className="shipping">
                 <PaymentTitle name={data[0].title} />
-                <Address />
+                <Address formType={'shipping'} handleTyping={handleTyping} />
             </div>
             <div className="billing">
                 <PaymentTitle name={data[1].title} />
-                <Address />
+                <Address formType={'billing'} handleTyping={handleTyping} />
             </div>
             <div className="cc">
                 <PaymentTitle name={data[2].title} />
@@ -33,7 +70,7 @@ function Purchase() {
             </div>
             <div className="order">
                 <PaymentTitle name={data[3].title} />
-                <OrderSummary />
+                <OrderSummary info={state} />
             </div>
             <div className="total">
                 <PaymentTitle />
