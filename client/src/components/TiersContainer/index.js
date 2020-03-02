@@ -77,9 +77,9 @@ function TiersContainer() {
     
     
 
-    function showDescription() {
+    function showDescription(i) {
         console.log('SHOW DESCRIPTION')
-        setState({ ...state, descriptionIndex: realData[1][0].title })
+        setState({ ...state, descriptionIndex: i })
 
     }
 

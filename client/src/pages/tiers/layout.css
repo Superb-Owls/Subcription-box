@@ -5,7 +5,7 @@
     /* background-image: linear-gradient(to bottom right, red, maroon); */
     background-image: url("https://www.psdgraphics.com/file/halftone-pattern.gif");
     background-size: cover;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 10% 20% 35% 35%;
     grid-template-areas: 
       "title title title title title title"
