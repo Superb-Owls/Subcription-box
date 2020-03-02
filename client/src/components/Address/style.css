@@ -1,0 +1,16 @@
+.addressForm{
+    padding: 20px;
+    
+}
+input[type=text]{
+    width: 80%;
+    padding: 12px 20px;
+  margin: 8px 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input[type=select]{
+  width: 60%;
+    padding: 12px 20px;
+  margin: 8px 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
