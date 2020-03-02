@@ -4,7 +4,8 @@ import {
   useElements,
   CardNumberElement,
   CardCvcElement,
-  CardExpiryElement
+  CardExpiryElement,
+  CardElement
 } from "@stripe/react-stripe-js";
 
 import useResponsiveFontSize from "./UseResponsiveFontSize";
@@ -34,29 +35,61 @@ const useOptions = () => {
   return options;
 };
 
+async function stripeTokenHandler(token) {
+  const paymentData = { token: token.id, amount: 1555 };
+
+  // Use fetch to send the token ID and any other payment data to your server.
+  //     https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+  const response = await fetch('/chargestripe', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(paymentData),
+  });
+  return response.json();
+}
+
 const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
 
+
   const handleSubmit = async event => {
     event.preventDefault();
-
     if (!stripe || !elements) {
       // Stripe.js has not loaded yet. Make sure to disable
       // form submission until Stripe.js has loaded.
       return;
     }
-
     const payload = await stripe.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardNumberElement)
     });
     console.log("[PaymentMethod]", payload);
+
+    const card = elements.getElement(CardNumberElement);
+    console.log("CARD ", card)
+    stripe.createToken(card).then(function (result) {
+      if (result.error) {
+        // Inform the customer that there was an error.
+        var errorElement = document.getElementById('card-errors');
+        errorElement.textContent = result.error.message;
+      } else {
+        console.log(result)
+        // Send the token to your server.
+        stripeTokenHandler(result.token);
+      }
+    });
+
   };
 
+
+
   return (
-    <form onSubmit={handleSubmit}>
+
+    <form onSubmit={handleSubmit} id="payment-form">
       <label>
         Card number
         <CardNumberElement
@@ -111,11 +144,14 @@ const PaymentForm = () => {
           }}
         />
       </label>
+
       <button type="submit" disabled={!stripe}>
         Pay
       </button>
     </form>
+
   );
 };
+
 
 export default PaymentForm;
