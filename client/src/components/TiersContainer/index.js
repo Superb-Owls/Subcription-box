@@ -10,7 +10,7 @@ var realData = new Array(6, null)
 
 function TiersContainer() {
 
-    const [state, setState] = useState({ herosArray: data, firstName: '', lastName: '', descriptionIndex: '' });
+    const [state, setState] = useState({ herosArray: data, realData: new Array(6, null), firstName: '', lastName: '', descriptionIndex: '' });
 
     useEffect(() => {
         var thor = 1009664
@@ -24,6 +24,7 @@ function TiersContainer() {
             // console.log(res.images)
             
             realData[3] = Comics(res)
+            setState({ ...state, realData: realData })
             // console.log(realData[2]);
 
            
@@ -112,7 +113,7 @@ function TiersContainer() {
     console.log('this is the real data!!!!', realData)
     return (
         <>
-            {realData.length === 6 ? state.herosArray.map((hero, comic, i) => {
+            {state.realData.length > 4 ? state.herosArray.map((hero, comic, i) => {
 
                 if (hero['show-collapsible']) {
                     realData[hero.index].map((comic, i) => {
@@ -153,7 +154,7 @@ function TiersContainer() {
                         </div>
                     </>
                 )
-            }) : (<h1> Loading!</h1>)}
+            }) : (<div class="loader"></div>)}
 
             {comics}
         </>
