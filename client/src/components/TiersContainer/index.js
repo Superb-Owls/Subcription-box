@@ -44,7 +44,7 @@ function TiersContainer() {
         marvelHeroes(spiderMan).then((res) => {
             // realData.push({spiderManData:res})
             realData[1] = Comics(res)
-            console.log(realData);
+            // console.log(realData);
             // console.log("This is Spiderman:", spiderManData)
         })
         marvelHeroes(hulk).then((res) => {
@@ -63,7 +63,7 @@ function TiersContainer() {
 
         //then set the state with realData array
         // console.log(realData)
-    })
+    }, [realData])
 
 
     // console.log(realData.length);
@@ -79,13 +79,13 @@ function TiersContainer() {
     
 
     function showDescription(i) {
-        console.log('SHOW DESCRIPTION')
+        // console.log('SHOW DESCRIPTION')
         setState({ ...state, descriptionIndex: i })
 
     }
 
     function hideDescription(i) {
-        console.log('HIDE DESCRIPTION')
+        // console.log('HIDE DESCRIPTION')
         setState({ ...state, descriptionIndex: '' })
     }
 
@@ -98,7 +98,7 @@ function TiersContainer() {
         var newState = state.herosArray
         newState.map((hero) => {
             if (hero.name === heroName) {
-                console.log('We found the match!!!!!', hero)
+                // console.log('We found the match!!!!!', hero)
                 hero['show-collapsible'] = true
             } else {
                 hero['show-collapsible'] = false
@@ -109,8 +109,8 @@ function TiersContainer() {
 
     }
     let comics = []
-    console.log('this is the state', state)
-    console.log('this is the real data!!!!', realData)
+    // console.log('this is the state', state)
+    // console.log('this is the real data!!!!', realData)
     return (
         <>
             {state.realData.length > 4 ? state.herosArray.map((hero, comic, i) => {
