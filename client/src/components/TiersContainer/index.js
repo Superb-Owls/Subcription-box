@@ -23,39 +23,39 @@ function TiersContainer() {
         marvelHeroes(thor).then((res) => {
             // console.log(res.images)
             
-            realData[2] = Comics(res)
+            realData[3] = Comics(res)
             // console.log(realData[2]);
 
            
             // console.log("This is Thor:", thorData)
         })
-        // marvelHeroes(wolverine).then((res) => {
-        //     realData.push({wolverineData:res})
-            
+        marvelHeroes(wolverine).then((res) => {
+            realData[6] = Comics(res) 
+            // console.log(realData[5])           
             // console.log("This is wolverine:", wolverineData)
-        // })
+        })
         marvelHeroes(ironman).then((res) => {
-            realData[3] = Comics(res)
+            realData[4] = Comics(res)
             // console.log(realData[3]);
             // realData.push({ironmanData:res})
             // console.log("This is Ironman:", ironmanData)
         })
         marvelHeroes(spiderMan).then((res) => {
             // realData.push({spiderManData:res})
-            realData[0] = Comics(res)
-            // console.log(realData[0]);
+            realData[1] = Comics(res)
+            console.log(realData);
             // console.log("This is Spiderman:", spiderManData)
         })
         marvelHeroes(hulk).then((res) => {
-            realData[4] = Comics(res)
+            realData[5] = Comics(res)
             // console.log(realData[4]);
             // realData.push({hulk:res})
             // console.log("This is Hulk:", hulkData)
         })
         marvelHeroes(captainAmerica).then((res) => {
             // realData.push({captainAmericaData:res})
-            realData[1] = Comics(res)
-            console.log(realData[1]);
+            realData[2] = Comics(res)
+            // console.log(realData[1]);
 
             // console.log("This is captainAmerica:", captainAmericaData)
         })
@@ -108,13 +108,14 @@ function TiersContainer() {
 
     }
     let comics = []
-    console.log('this is the staet', state)
+    console.log('this is the state', state)
+    console.log('this is the real data!!!!', realData)
     return (
         <>
-            {state.herosArray.map((hero, comic, i) => {
+            {realData.length === 6 ? state.herosArray.map((hero, comic, i) => {
 
                 if (hero['show-collapsible']) {
-                    hero.comics.map((comic, i) => {
+                    realData[hero.index].map((comic, i) => {
                         const html = (
 
 
@@ -152,7 +153,7 @@ function TiersContainer() {
                         </div>
                     </>
                 )
-            })}
+            }) : (<h1> Loading!</h1>)}
 
             {comics}
         </>
