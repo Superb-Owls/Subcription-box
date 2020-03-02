@@ -30,6 +30,7 @@ function Navbar() {
 
                 <div>Your selections</div>
                 <div>Go to your cart</div>
+                <button id='checkoutBtn' className='checkoutBtn'>Go to Checkout</button>
             </div>
         </>
     )

@@ -2,11 +2,11 @@ import React from 'react';
 import './layout.css'
 import './style.css'
 import TiersContainer from '../../components/TiersContainer'
-
+import { CartContext } from "../../CartContext";
 
 function Tiers() {
     return (
-
+<CartContext.Provider>
         <div className="container-tiers">
             <div className="title">TITLE: CHOOSE YOUR TIER</div>
             <div className="tier1"></div>
@@ -14,6 +14,7 @@ function Tiers() {
             <TiersContainer />
 
         </div>
+        </CartContext.Provider>
     )
 }
 

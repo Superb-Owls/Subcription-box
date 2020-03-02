@@ -65,7 +65,7 @@ function TiersContainer() {
                                     backgroundColor: 'grey',
                                     height: "100%",
                                     width: '100%',
-                                    opacity: 0.4
+                                    opacity: 0.8
                                 }}>
                                     <h1 style={{
                                         margin: '0px',
@@ -73,9 +73,10 @@ function TiersContainer() {
 
                                     }}>{comic.title}</h1>
                                 </div>) : ''}
-
+                                   
 
                             </div>
+                            
                         )
 
                         comics.push(html)
@@ -87,10 +88,13 @@ function TiersContainer() {
                             <div className={"hoverImage hover" + `${hero.index}`}></div>
                         </div>
                     </>
+
                 )
             })}
 
-            {comics}
+            {comics}{<div className='buy'>
+                <button>Hey</button>
+                </div>}
         </>
 
     )

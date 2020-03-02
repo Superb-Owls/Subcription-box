@@ -10,8 +10,19 @@ import Navbar from './components/Navbar'
 import Tiers from "./pages/tiers"
 import About from './pages/about'
 
-
-
+const Inventory = [
+  {
+    title: "Tiers",
+    products: [
+      { id: 1, title: "Spider-man" },
+      { id: 2, title: "Captain America" },
+      { id: 3, title: "Thor" },
+      { id: 4, title: "Iron Man" },
+      { id: 5, title: "Hulk" },
+      { id: 6, title: "Wolverine" }
+    ]
+  }
+];
 
 function App() {
   return (

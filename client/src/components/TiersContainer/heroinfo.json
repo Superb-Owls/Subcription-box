@@ -31,6 +31,11 @@
                 "image": "http://i.annihil.us/u/prod/marvel/i/mg/b/03/57aa238855274/portrait_xlarge.jpg",
                 "title": "The Amazing Spider-Man (1963) #50",
                 "gridSpot": "comic5"
+            },
+            {
+                "image": null,
+                "title": "Uncanny X-Men (1963) #268",
+                "gridSpot": "buy"
             }
         ]
     },
@@ -66,6 +71,11 @@
                 "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/30/50acf5f842703/portrait_xlarge.jpg",
                 "title": "Captain America (1968) #344",
                 "gridSpot": "comic5"
+            },
+            {
+                "image": null,
+                "title": "Uncanny X-Men (1963) #268",
+                "gridSpot": "buy"
             }
         ]
     },
@@ -101,6 +111,11 @@
                 "image": "http://i.annihil.us/u/prod/marvel/i/mg/7/20/4f63557dc95d4/portrait_xlarge.jpg",
                 "title": "Thor (1966) #380 ",
                 "gridSpot": "comic5"
+            },
+            {
+                "image": null,
+                "title": "Uncanny X-Men (1963) #268",
+                "gridSpot": "buy"
             }
         ]
     },
@@ -136,6 +151,11 @@
                 "image": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/50ad44d694af8/portrait_xlarge.jpg",
                 "title": "Iron Man (1968) #234",
                 "gridSpot": "comic5"
+            },
+            {
+                "image": null,
+                "title": "Uncanny X-Men (1963) #268",
+                "gridSpot": "buy"
             }
         ]
     },
@@ -171,6 +191,11 @@
                 "image": "http://i.annihil.us/u/prod/marvel/i/mg/c/40/4f7dcdf1d6033/portrait_xlarge.jpg",
                 "title": "Hulk (2008) #50 (Simonson Variant)",
                 "gridSpot": "comic5"
+            },
+            {
+                "image": null,
+                "title": "Uncanny X-Men (1963) #268",
+                "gridSpot": "buy"
             }
         ]
     },
@@ -206,6 +231,12 @@
                 "image": "http://i.annihil.us/u/prod/marvel/i/mg/2/f0/51141692b7b5a/portrait_xlarge.jpg",
                 "title": "Uncanny X-Men (1963) #268",
                 "gridSpot": "comic5"
+            },
+            {
+                "image": null,
+                "title": "Uncanny X-Men (1963) #268",
+                "gridSpot": "buy"
+
             }
         ]
     }
