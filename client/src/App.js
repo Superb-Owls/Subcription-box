@@ -19,8 +19,9 @@ function App() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isAuth, setIsAuth] = useState(false)
-  const [test, setTest] = useState('')
+  // const [isAuth, setIsAuth] = useState(false)
+  let isAuthenticated = ''
+  console.log(isAuthenticated)
 
   function handleRegisterSubmit(newName, email, password, cb) {
     setUsername(newName);
@@ -29,7 +30,7 @@ function App() {
     axios.post('api/register', {name: newName, email: email, password: password})
     .then((response)=>{
       if(response.status === 200){
-        console.log(username, email, password, isAuth)
+        console.log(username, email, password)
         var target = "login"
         cb(target)
       }
@@ -43,28 +44,21 @@ function App() {
     axios.post('api/login', {email: logEmail, password: logPassword})
     .then((response)=>{
       if(response.status === 200){
-        setTest('test')
+        // setIsAuth(true)
         var target = ""
        call(target)
-       console.log(isAuth)
-       testfun()
-      } else {
-        throw new Error();
-      }
+       isAuthenticated = true
+       console.log(newName, email, password, isAuthenticated)
+       console.log(LoginContext)
+      } 
       
     })
-    .catch(err => {
-      console.log(err)
-    })
   }
-async function testfun(){
-  await setIsAuth(true)
-  console.log(isAuth)
-}
+
 
   return (
     <>
-    <LoginContext.Provider value={{username, handleRegisterSubmit, handleLoginSubmit}}>
+    <LoginContext.Provider value={{username, handleRegisterSubmit, handleLoginSubmit, isAuthenticated}}>
     <Router>
       <div>
         <Navbar></Navbar>

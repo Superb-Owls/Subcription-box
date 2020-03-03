@@ -6,6 +6,7 @@ import {withRouter, useHistory } from 'react-router-dom';
 function Login(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isAuth, setIsAuth] = useState(false)
     // const [isAuth, setIsAuth] = useState(false)
     let history = useHistory();
     let {username, isAuthenticated, handleLoginSubmit} = useContext(LoginContext);
@@ -25,6 +26,9 @@ function Login(){
     const redirect = (location)=>{
         return history.push('/'+location)
     }
+    // const authfun = ()=>{
+    //     return true
+    // }
 
     return(
         <>
@@ -41,7 +45,7 @@ function Login(){
 </div>
 <button onClick={newSubmit}>Login</button>
 </div>
-<a href="/register2">Register</a>
+<a href="/register">Register</a>
     </>
     )
 }
