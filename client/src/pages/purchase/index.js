@@ -37,6 +37,8 @@ function Purchase() {
         }
     })
 
+    const [purchase, setPurchase] = useState(false)
+
     const handleTyping = (e, formType) => {
         console.log('u r typing!!', e.target.value, e.target.name, formType)
         // setState({ ...state, state[formType][e.target.name]: e.target.value })
@@ -65,7 +67,7 @@ function Purchase() {
             <div className="cc">
                 <PaymentTitle name={data[2].title} />
                 <Elements stripe={stripePromise}>
-                    <PaymentForm />
+                    <PaymentForm purchase={purchase} />
                 </Elements>
             </div>
             <div className="order">
@@ -74,7 +76,7 @@ function Purchase() {
             </div>
             <div className="total">
                 <PaymentTitle />
-                <OrderTotal />
+                <OrderTotal purchase={purchase} setPurchase={setPurchase} />
             </div>
 
 

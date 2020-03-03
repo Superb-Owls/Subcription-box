@@ -37,9 +37,11 @@ const useOptions = () => {
 };
 
 
-const PaymentForm = () => {
+const PaymentForm = (props) => {
 
-  // const [state, setState] = useState();
+
+  console.log('THESE r PROPS ********** payment form ********', props);
+
 
   const stripe = useStripe();
   const elements = useElements();
@@ -47,8 +49,11 @@ const PaymentForm = () => {
 
 
   const handleSubmit = async event => {
-    event.preventDefault()
-    var response = fetch("api/chargestripe").then(function (response) {
+    if (event) {
+      event.preventDefault()
+    }
+
+    var response = fetch("http://localhost:3001/api/chargestripe").then(function (response) {
       return response.json();
     }).then(function (responseJson) {
 
@@ -77,6 +82,10 @@ const PaymentForm = () => {
       });
     });
 
+  }
+
+  if (props.purchase === true) {
+    handleSubmit()
   }
 
   return (
