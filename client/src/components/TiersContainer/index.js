@@ -179,7 +179,7 @@ function TiersContainer(props) {
             {comics}
             {state.herosArray.map((singleHero)=> {
                 if(singleHero['show-collapsible'] === true) {
-                    return (<button className="buy">Buy</button>)
+                    return (<button className="buy" onClick={() => {addToCartClick()}}>Buy</button>)
                 }
             })}
             
