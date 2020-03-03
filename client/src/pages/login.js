@@ -6,6 +6,7 @@ import {withRouter, useHistory } from 'react-router-dom';
 function Login(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    // const [isAuth, setIsAuth] = useState(false)
     let history = useHistory();
     let {username, isAuthenticated, handleLoginSubmit} = useContext(LoginContext);
     const newSubmit = event => {

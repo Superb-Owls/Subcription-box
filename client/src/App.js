@@ -20,6 +20,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isAuth, setIsAuth] = useState(false)
+  const [test, setTest] = useState('')
 
   function handleRegisterSubmit(newName, email, password, cb) {
     setUsername(newName);
@@ -28,6 +29,7 @@ function App() {
     axios.post('api/register', {name: newName, email: email, password: password})
     .then((response)=>{
       if(response.status === 200){
+        console.log(username, email, password, isAuth)
         var target = "login"
         cb(target)
       }
@@ -37,14 +39,28 @@ function App() {
   function handleLoginSubmit(logEmail, logPassword, call){
     setEmail(logEmail);
     setPassword(logPassword);
+    
     axios.post('api/login', {email: logEmail, password: logPassword})
     .then((response)=>{
       if(response.status === 200){
+        setTest('test')
         var target = ""
-        call(target)
+       call(target)
+       console.log(isAuth)
+       testfun()
+      } else {
+        throw new Error();
       }
+      
+    })
+    .catch(err => {
+      console.log(err)
     })
   }
+async function testfun(){
+  await setIsAuth(true)
+  console.log(isAuth)
+}
 
   return (
     <>
