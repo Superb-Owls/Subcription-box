@@ -43,7 +43,7 @@ function App() {
     axios.post('api/login', {email: logEmail, password: logPassword})
     .then((response)=>{
       if(response.status === 200){
-        setTest('test')
+        // setTest('test')
         var target = ""
        call(target)
        console.log(isAuth)
