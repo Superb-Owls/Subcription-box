@@ -30,7 +30,7 @@ function Navbar(props) {
                 <div className="closebtn" onClick={closeNav} href="javascript:void(0)">&times;</div>
 
                 {/* <div>Your selections</div> */}
-    <h1>About to but {props.selectedHero} for $20 !!!!</h1>
+    <h1>You have selected: {props.selectedHero} for $20</h1>
     <button className='checkoutBtn'>Buy Now!</button>
                 {/* <div>Go to your cart</div> */}
             </div>
