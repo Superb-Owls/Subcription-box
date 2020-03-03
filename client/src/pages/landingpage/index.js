@@ -20,7 +20,7 @@ function LandingPage() {
 
                 </img>
             </div>
-            <div className="pic2">PIC2</div>
+            <div className="pic2"></div>
 
             <div className="description">
                 <Description />

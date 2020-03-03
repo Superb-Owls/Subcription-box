@@ -135,13 +135,14 @@ function TiersContainer() {
                                     backgroundColor: 'grey',
                                     height: "100%",
                                     width: '100%',
-                                    opacity: 0.4
+                                    opacity: 0.8
                                 }}>
-                                    <h1 style={{
+                                    <h3 style={{
                                         margin: '0px',
-                                        opacity: 1
+                                        opacity: 1,
+                                        color: "black"
 
-                                    }}>{comic.title}</h1>
+                                    }}>{comic.title}</h3>
                                 </div>) : ''}
 
 
@@ -165,7 +166,7 @@ function TiersContainer() {
             {comics}
             {state.herosArray.map((singleHero)=> {
                 if(singleHero['show-collapsible'] === true) {
-                    return (<button className="buy">Buy</button>)
+                    return (<button className="buy">Buy Hero</button>)
                 }
             })}
             

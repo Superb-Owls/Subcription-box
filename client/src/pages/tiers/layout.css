@@ -55,9 +55,11 @@
   .buy{
       grid-area: buy;
       margin-left: 30px;
-      margin-top: 50px;
+      margin-top: 75px;
       width: 150px;
       height: 40px;
       text-align: center;
+      background-color: maroon;
+      border-radius: 10px;
 
   }
