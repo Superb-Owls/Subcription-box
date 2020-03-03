@@ -48,6 +48,7 @@
       background-position: center;
       background-repeat: no-repeat;
   }
+
   .footerwrapper{
     grid-area: footer;
     display: grid;
@@ -93,3 +94,16 @@
     color: white
 
 }
+
+
+
+  .buy{
+      grid-area: buy;
+      margin-left: 30px;
+      margin-top: 50px;
+      width: 150px;
+      height: 40px;
+      text-align: center;
+
+  }
+

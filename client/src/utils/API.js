@@ -17,7 +17,7 @@ class ApiFront {
             return axios.delete(`/api/${route}/${id}`)
         }
         this.save = function (postData) {
-            return axios.post(`/api${route}`, postData)
+            return axios.post(`/api/${route}`, postData)
         }
     }
 }
@@ -29,6 +29,7 @@ export default {
     user: new ApiFront("user"),
     subscription: new ApiFront("subscription"),
     testimonial: new ApiFront("testimonial"),
+    chargestripe: new ApiFront("chargestripe"),
     marvel: marvel
 }
 
