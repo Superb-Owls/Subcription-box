@@ -4,6 +4,7 @@ import './style.css'
 import data from './heroinfo.json'
 import { marvelHeroes } from "../../utils/marvelRd2"
 import Comics from './Comics';
+// import '../../pages/tiers/layout.css'
 
 
 var realData = new Array(6, null)
@@ -105,6 +106,7 @@ function TiersContainer(props) {
     //this component has a shared context between row 1 and 2 with showCollapsible, setCollapsible?
     function handleClick(e, heroName) {
         e.preventDefault();
+
         // paul
         // this.setState({ targetCollapsible: heroName, showCollapsible: true, targetIndex: e.target.index })
         //
@@ -116,6 +118,7 @@ function TiersContainer(props) {
             } else {
                 hero['show-collapsible'] = false
             }
+
         })
 
         setState({ ...state, herosArray: newState })
@@ -124,6 +127,7 @@ function TiersContainer(props) {
     let comics = []
     // console.log('this is the state', state)
     // console.log('this is the real data!!!!', realData)
+    
     return (
         <>
             {state.realData.length > 4 ? state.herosArray.map((hero, comic, i) => {
@@ -158,24 +162,31 @@ function TiersContainer(props) {
                         )
 
                         comics.push(html)
-                    })
-                    return <button className='Buy' onClick={() => {addToCartClick()}}>Hey</button>
+                    })                   
+                    //return// <button className="buy">Buy</button>
                 }
                 
                 return (
                     <>
                         <div key={i} className={`${hero['grid-name']} heroCard`} onClick={(e) => { handleClick(e, hero.name) }}>
                             <div className={"hoverImage hover" + `${hero.index}`}></div>
+                        {/* <div className={`${buy["grid-name"]}`}><Button/></div> */}
                         </div>
                     </>
                 )
             }) : (<div class="loader"></div>)}
 
-            {comics} 
-            
+            {comics}
+            {state.herosArray.map((singleHero)=> {
+                if(singleHero['show-collapsible'] === true) {
+                    return (<button className="buy">Buy</button>)
+                }
+            })}
             
         </>
-
+    
     )
+    
 }
+
 export default TiersContainer;

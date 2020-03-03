@@ -1,7 +1,8 @@
 import React from 'react';
 import './style.css'
 
-function OrderTotal() {
+function OrderTotal(props) {
+    console.log('PROPS in order total!!!!', props)
     return (
         <>
             <div className="totalWrapper">
@@ -9,7 +10,7 @@ function OrderTotal() {
                 <div className="estShipping">Estimated Shipping: $</div>
                 <div className="salesTax">Sales Tax: $</div>
                 <div className="total">Total: $</div>
-                <button>Place Your Order</button>
+                <button onClick={() => { props.setPurchase(true) }}>Place Your Order</button>
             </div>
         </>
     )
