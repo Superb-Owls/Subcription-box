@@ -31,7 +31,7 @@ function Navbar(props) {
 
                 {/* <div>Your selections</div> */}
     <h1>About to but {props.selectedHero} for $20 !!!!</h1>
-    <button>Buy Now!</button>
+    <button className='checkoutBtn'>Buy Now!</button>
                 {/* <div>Go to your cart</div> */}
             </div>
         </>
