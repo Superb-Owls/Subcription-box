@@ -37,6 +37,8 @@ function Purchase() {
         }
     })
 
+    const [purchase, setPurchase] = useState(false)
+
     const handleTyping = (e, formType) => {
         console.log('u r typing!!', e.target.value, e.target.name, formType)
         // setState({ ...state, state[formType][e.target.name]: e.target.value })
@@ -65,7 +67,7 @@ function Purchase() {
             <div className="cc">
                 <PaymentTitle name={data[2].title} />
                 <Elements stripe={stripePromise}>
-                    <PaymentForm />
+                    <PaymentForm purchase={purchase} />
                 </Elements>
             </div>
             <div className="order">
@@ -74,9 +76,38 @@ function Purchase() {
             </div>
             <div className="total">
                 <PaymentTitle />
-                <OrderTotal />
+                <OrderTotal purchase={purchase} setPurchase={setPurchase} />
             </div>
-
+            <div className="footerwrapper">
+                <div className="footlogo">
+                    <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200"></img>
+                </div>
+                <div className="footlinks2">
+                    <a href="/LoginOrSignUp">LOGIN</a>
+                    <br />
+                    <a href="/Tiers">SUBSCRIPTIONS</a>
+                    <br />
+                    <a href="/About">ABOUT</a>
+                    <br />
+                    <a href="/PrivacyPolicy">PRIVACY POLICY</a>
+                    <br />
+                    <a href="https://github.com/Superb-Owls/Subscription-box">GITHUB</a>
+                    <br />
+                    <a href="/Sitemap">SITEMAP</a>
+                    <br />
+                    <br />
+                    © HEROBOX 2020
+                    </div>
+                <div className="footlinks1">
+                    THIS IS A STUDENT PROJECT, NOT AN ACTUAL E-COMMERCE SITE.
+                        <br />
+                    <br />
+                    PLEASE DO NOT ENTER IN YOUR CREDIT CARD INFORMATION.
+                        <br />
+                    <br />
+                    NO ACTUAL SERVICE WILL BE PROVIDED.
+                    </div>
+            </div>
 
         </div>
 

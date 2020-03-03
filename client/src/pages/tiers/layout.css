@@ -6,12 +6,13 @@
     background-image: url("https://www.psdgraphics.com/file/halftone-pattern.gif");
     background-size: cover;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10% 20% 35% 35%;
+    grid-template-rows: 10% 20% 35% 35% 25%;
     grid-template-areas: 
       "title title title title title title"
       "tier1 tier1 tier1 tier2 tier2 tier2"
       "hero1 hero2 hero3 hero4 hero5 hero6"
-      "comic1 comic2 comic3 comic4 comic5 buy";
+      "comic1 comic2 comic3 comic4 comic5 buy"
+      "footer footer footer footer footer footer";
       
   }
   .title{
@@ -47,7 +48,62 @@
       background-position: center;
       background-repeat: no-repeat;
   }
- /* .hero-choices {
-      grid-area: hero-choices;
-     display: inline;
-  } */
+
+  .footerwrapper{
+    grid-area: footer;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "footlogo links1 links2";
+  }
+.footlogo{
+    grid-area: footlogo;
+    background-color: #333;
+}
+.footlogo > img{
+    margin-left: 230px;
+}
+.footlinks1{
+    grid-area: links1;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.footlinks2{
+    grid-area: links2;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+.footlinks2 > a:link{
+    color:  maroon;
+}
+.footlinks2 > a:visited{
+    color:  black;
+}
+.footlinks2 > a:hover{
+    color:  white;
+}
+.footcopyw{
+    grid-area: copyw;
+    background-color: #333;
+    color: white
+
+}
+
+
+
+  .buy{
+      grid-area: buy;
+      margin-left: 30px;
+      margin-top: 50px;
+      width: 150px;
+      height: 40px;
+      text-align: center;
+
+  }
+

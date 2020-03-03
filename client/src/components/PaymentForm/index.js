@@ -1,11 +1,12 @@
+
 import React, { useMemo } from "react";
+
 import {
   useStripe,
   useElements,
   CardNumberElement,
   CardCvcElement,
   CardExpiryElement,
-  CardElement
 } from "@stripe/react-stripe-js";
 
 import useResponsiveFontSize from "./UseResponsiveFontSize";
@@ -35,57 +36,57 @@ const useOptions = () => {
   return options;
 };
 
-async function stripeTokenHandler(token) {
-  const paymentData = { token: token.id, amount: 1555 };
 
-  // Use fetch to send the token ID and any other payment data to your server.
-  //     https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-  const response = await fetch('/chargestripe', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(paymentData),
-  });
-  return response.json();
-}
+const PaymentForm = (props) => {
 
-const PaymentForm = () => {
+
+  console.log('THESE r PROPS ********** payment form ********', props);
+
+
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
 
 
   const handleSubmit = async event => {
-    event.preventDefault();
-    if (!stripe || !elements) {
-      // Stripe.js has not loaded yet. Make sure to disable
-      // form submission until Stripe.js has loaded.
-      return;
+    if (event) {
+      event.preventDefault()
     }
-    const payload = await stripe.createPaymentMethod({
-      type: "card",
-      card: elements.getElement(CardNumberElement)
+
+    var response = fetch("http://localhost:3001/api/chargestripe").then(function (response) {
+      return response.json();
+    }).then(function (responseJson) {
+
+      console.log('WE got this back fromt he BE!!!!!', responseJson);
+      var clientSecret = responseJson.client_secret;
+
+      const card = elements.getElement(CardNumberElement);
+      console.log('HERE IS NEW CARD!!!!! !!!!!!!!!', card)
+
+      // Call stripe.confirmCardPayment() with the client secret.
+      stripe.confirmCardPayment(
+        clientSecret,
+        {
+          payment_method: { card: card },
+        }
+      ).then(function (result) {
+        console.log('GOT this back from the CONFIRM stripe!!!', result)
+        if (result.error) {
+          // Display error.message in your UI.
+          alert("ERROR")
+        } else {
+          // The payment has succeeded
+          // Display a success message
+          alert("SUCCESS")
+        }
+      });
     });
-    console.log("[PaymentMethod]", payload);
 
-    const card = elements.getElement(CardNumberElement);
-    console.log("CARD ", card)
-    stripe.createToken(card).then(function (result) {
-      if (result.error) {
-        // Inform the customer that there was an error.
-        var errorElement = document.getElementById('card-errors');
-        errorElement.textContent = result.error.message;
-      } else {
-        console.log(result)
-        // Send the token to your server.
-        stripeTokenHandler(result.token);
-      }
-    });
+  }
 
-  };
-
-
+  if (props.purchase === true) {
+    handleSubmit()
+  }
 
   return (
 
@@ -145,13 +146,16 @@ const PaymentForm = () => {
         />
       </label>
 
-      <button type="submit" disabled={!stripe}>
+      <button type="submit" disabled={!stripe} data-secret="{{ client_secret }}">
         Pay
       </button>
     </form>
 
   );
-};
+}
 
 
-export default PaymentForm;
+export default PaymentForm
+
+
+
