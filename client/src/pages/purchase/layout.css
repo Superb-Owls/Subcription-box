@@ -1,0 +1,31 @@
+.paymentWrapper{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "shipping order"
+    "billing order"
+    "cc total";
+}
+.shipping{
+    grid-area: shipping;
+    background-color: navajowhite;
+}
+.billing{
+    grid-area: billing;
+    background-color: saddlebrown;
+}
+.cc{
+    grid-area: cc;
+    background-color: deeppink;
+}
+.order{
+    grid-area: order;
+    background-color: darkcyan;
+}
+.total{
+    grid-area: total;
+    background-color: mediumpurple;
+}

@@ -1,0 +1,22 @@
+.summaryWrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180% 180% 180% 180%;
+    grid-template-areas: 
+    "sumShip"
+    "sumBill"
+    "sumCc"
+    "sumHero";
+}
+.sumShip{
+    grid-area: sumShip;
+}
+.sumBill{
+    grid-area: sumBill;
+}
+.sumCc{
+    grid-area: sumCc;
+}
+.sumHero{
+    grid-area: sumHero;
+}

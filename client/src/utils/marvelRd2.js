@@ -6,13 +6,14 @@ import util from 'util'
 import {getApiHash} from 'marvel-api-hash-generator'; 
 
 export const marvelHeroes = async (hero) => {
+    console.log('ABOUT TO CALL MARVEL API!!!!!$$$$_-------__-_-_-_-__-_-----------------')
     const timeStamp = 1;
-    const privateKey = '6c4a21867e8c29ab70e83a75acf55a3fc4fb32f7';
-    const publicKey = 'af4d5095c082c430b6d9efa8604ba06f';
+    const privateKey = 'd83c6df75c8555935cf81563e7d6669a31f4bb67';
+    const publicKey = '49597908c7f0a901e28bc09389ae8f19';
     const hashValue = getApiHash(timeStamp, privateKey, publicKey);
 
     const getResult = util.promisify(request)
-    console.log(getResult)
+    // console.log(getResult)
     const requestConstantCharacters = 'https://gateway.marvel.com/v1/public/characters/' + hero + '/comics?limit=100&';
     const exampleUrl = `${requestConstantCharacters}ts=${timeStamp}&orderBy=-modified&apikey=${publicKey}&hash=${hashValue}`;
     var characters = {}

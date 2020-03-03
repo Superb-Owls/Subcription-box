@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Shipping Address"
+    },
+    {
+        "title": "Billing Address"
+    },
+    {
+        "title": "Credit Card Information"
+    },
+    {
+        "title": "Order Summary"
+    }
+]
