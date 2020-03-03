@@ -13,10 +13,11 @@ import Register from './pages/register'
 import LoginContext from './utils/loginContext';
 import axios from 'axios'
 
-function App() {
 
-  const [selectedHero, setHero ] = useState('')
+
+  
 function App() {
+  const [selectedHero, setHero ] = useState('')
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -49,7 +50,7 @@ function App() {
         var target = ""
        call(target)
        isAuthenticated = true
-       console.log(newName, email, password, isAuthenticated)
+       console.log(username, email, password, isAuthenticated)
        console.log(LoginContext)
       } 
       

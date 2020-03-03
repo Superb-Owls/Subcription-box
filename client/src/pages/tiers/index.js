@@ -22,11 +22,7 @@ function Tiers(props) {
             <div className="title">TITLE: CHOOSE YOUR TIER</div>
             <div className="tier1"></div>
             <div className="tier2"></div>
-<<<<<<< HEAD
-            <TiersContainer setHero={props.setHero} />
-=======
-
-            <TiersContainer />
+            <TiersContainer setHero={props.setHero}/>
             <div className="footerwrapper">
                 <div className="footlogo">
                     <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200"></img>
@@ -57,11 +53,6 @@ function Tiers(props) {
                     NO ACTUAL SERVICE WILL BE PROVIDED.
                     </div>
             </div>
-
-
-  
->>>>>>> master
-
         </div>
             </>
     )
