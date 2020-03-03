@@ -24,6 +24,7 @@ function Navbar(props) {
                 </a>
                 <a href="login" style={{ float: "right" }}>LOGIN</a>
                 <a href="/tiers" style={{ float: "right" }}>SUBSCRIPTIONS</a>
+                <a href="/about" style={{ float: "right" }}>ABOUT US</a>
             </div>
 
             <div id="mySidebar" className="sidebar">
