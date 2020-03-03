@@ -2,3 +2,40 @@
     align-items: center;
     margin: 50px 50px 50px 50px;
 }
+
+.studentCard{
+    height: 500px;
+}
+
+.social-icons {
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    height: 11.5rem;
+    width: 11.5rem;
+    background-color: #495057;
+    margin: 6px 0px 0px 0px;
+    color: #fff!important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin-right: 1rem;
+  }
+  
+  .social-icons a:hover {
+    background-color: #BD5D38;
+  }
+
+  .fab {
+    font-size: 101px;
+    margin: 45px 0px 0px 0px;
+  }
+
+  .far {
+    font-size: 101px;
+    margin: 45px 0px 0px 0px;
+  }

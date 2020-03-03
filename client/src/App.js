@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/landingpage/"
 import LoginSignUp from "./pages/loginorsignup"
@@ -11,13 +11,14 @@ import Tiers from "./pages/tiers"
 import About from './pages/about'
 
 
-
-
 function App() {
+
+  const [selectedHero, setHero ] = useState('')
+
   return (
     <Router>
       <div>
-        <Navbar></Navbar>
+        <Navbar selectedHero={selectedHero}></Navbar>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/LoginOrSignUp" component={LoginSignUp} />
@@ -27,8 +28,7 @@ function App() {
 
           <Route exact path="/Test" component={Test} />
 
-
-          <Route exact path="/Tiers" component={Tiers} />
+          <Route exact path="/Tiers" render={(props) => <Tiers {...props} setHero={setHero} />} />
           <Route exact path="/About" component={About} />
         </Switch>
       </div>

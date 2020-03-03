@@ -6,7 +6,9 @@ import TiersContainer from '../../components/TiersContainer'
 
 
 
-function Tiers() {
+function Tiers(props) {
+    console.log('did the props show in in tiers ????????????', props)
+
 
     // function clickHero(e){
     //     return(
@@ -20,6 +22,9 @@ function Tiers() {
             <div className="title">TITLE: CHOOSE YOUR TIER</div>
             <div className="tier1"></div>
             <div className="tier2"></div>
+<<<<<<< HEAD
+            <TiersContainer setHero={props.setHero} />
+=======
 
             <TiersContainer />
             <div className="footerwrapper">
@@ -55,6 +60,7 @@ function Tiers() {
 
 
   
+>>>>>>> master
 
         </div>
             </>

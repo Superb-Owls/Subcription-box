@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css'
 
-function Navbar() {
+function Navbar(props) {
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
@@ -11,6 +11,7 @@ function Navbar() {
         document.getElementById("mySidebar").style.width = "0";
         document.getElementById("root").style.marginRight = "0";
     }
+    console.log('PROPS IN THE NAV BAR %%%%%%%%%%%%%%%%%%%%%', props)
     return (
         <>
             <div className="topnav">
@@ -23,13 +24,16 @@ function Navbar() {
                 </a>
                 <a href="login" style={{ float: "right" }}>LOGIN</a>
                 <a href="/tiers" style={{ float: "right" }}>SUBSCRIPTIONS</a>
+                <a href="/about" style={{ float: "right" }}>ABOUT US</a>
             </div>
 
             <div id="mySidebar" className="sidebar">
                 <div className="closebtn" onClick={closeNav} href="javascript:void(0)">&times;</div>
 
-                <div>Your selections</div>
-                <div>Go to your cart</div>
+                {/* <div>Your selections</div> */}
+    <h1>You have selected: {props.selectedHero} for $20</h1>
+    <button className='checkoutBtn'>Buy Now!</button>
+                {/* <div>Go to your cart</div> */}
             </div>
         </>
     )
