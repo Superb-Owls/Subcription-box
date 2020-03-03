@@ -32,3 +32,43 @@
     display: inline-flex;
 }
 
+
+/* Landscape tablets */
+/* @media only screen and (min-width: 768px) {
+    .pic1{
+        width: 30%;
+    }
+    .pic2{
+        width: 30%;
+    }
+    .logolanding{
+        width: 40%;
+    }
+} */
+/* Laptops and bigger screens */
+/* @media only screen and (max-width: 992px) {
+    .pic1{
+        width: 30%;
+    }
+    .pic2{
+        width: 30%;
+    }
+    .logolanding{
+        width: 40%;
+    }
+} */
+
+/* @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .pic1{
+        width: 20%;
+    }
+    .pic2{
+        width: 20%;
+    }
+    .logolanding{
+        width: 60%;
+    }
+} */
