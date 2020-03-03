@@ -4,14 +4,15 @@ import './style.css'
 import TiersContainer from '../../components/TiersContainer'
 
 
-function Tiers() {
+function Tiers(props) {
+    console.log('did the props show in in tiers ????????????', props)
     return (
 
         <div className="container-tiers">
             <div className="title">TITLE: CHOOSE YOUR TIER</div>
             <div className="tier1"></div>
             <div className="tier2"></div>
-            <TiersContainer />
+            <TiersContainer setHero={props.setHero} />
 
         </div>
     )

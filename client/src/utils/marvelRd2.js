@@ -8,8 +8,8 @@ import {getApiHash} from 'marvel-api-hash-generator';
 export const marvelHeroes = async (hero) => {
     console.log('ABOUT TO CALL MARVEL API!!!!!$$$$_-------__-_-_-_-__-_-----------------')
     const timeStamp = 1;
-    const privateKey = 'd83c6df75c8555935cf81563e7d6669a31f4bb67';
-    const publicKey = '49597908c7f0a901e28bc09389ae8f19';
+    const privateKey = '842ff9c110dfc8fad4a9b78b6ba39103cfe1642c';
+    const publicKey = '091f59c91efc44b2944db0d2ed8fe42a';
     const hashValue = getApiHash(timeStamp, privateKey, publicKey);
 
     const getResult = util.promisify(request)
