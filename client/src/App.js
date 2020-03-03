@@ -13,8 +13,9 @@ import Register from './pages/register'
 import LoginContext from './utils/loginContext';
 import axios from 'axios'
 
+function App() {
 
-
+  const [selectedHero, setHero ] = useState('')
 function App() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -54,14 +55,12 @@ function App() {
       
     })
   }
-
-
   return (
     <>
     <LoginContext.Provider value={{username, handleRegisterSubmit, handleLoginSubmit, isAuthenticated}}>
     <Router>
       <div>
-        <Navbar></Navbar>
+        <Navbar selectedHero={selectedHero}></Navbar>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/Login" component={Login} />
@@ -72,8 +71,7 @@ function App() {
 
           <Route exact path="/Test" component={Test} />
 
-
-          <Route exact path="/Tiers" component={Tiers} />
+          <Route exact path="/Tiers" render={(props) => <Tiers {...props} setHero={setHero} />} />
           <Route exact path="/About" component={About} />
         </Switch>
       </div>

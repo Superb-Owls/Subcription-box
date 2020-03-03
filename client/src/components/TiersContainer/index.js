@@ -9,7 +9,7 @@ import Comics from './Comics';
 
 var realData = new Array(6, null)
 
-function TiersContainer() {
+function TiersContainer(props) {
 
     const [state, setState] = useState({ herosArray: data, realData: new Array(6, null), firstName: '', lastName: '', descriptionIndex: '' });
 
@@ -77,6 +77,19 @@ function TiersContainer() {
     //     pictures: ""
     // })
     
+    function addToCartClick() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("root").style.marginRight = "250px";
+
+        state.herosArray.map(function(singleHero){
+            console.log('single hero', singleHero['show-collapsible'])
+            if(singleHero['show-collapsible']) {
+                console.log('hellooo!!! this is our match', singleHero.name)
+                props.setHero(singleHero.name)
+            }
+        })
+
+    }
     
 
     function showDescription(i) {
@@ -152,6 +165,7 @@ function TiersContainer() {
                     })                   
                     //return// <button className="buy">Buy</button>
                 }
+                
                 return (
                     <>
                         <div key={i} className={`${hero['grid-name']} heroCard`} onClick={(e) => { handleClick(e, hero.name) }}>
@@ -165,7 +179,7 @@ function TiersContainer() {
             {comics}
             {state.herosArray.map((singleHero)=> {
                 if(singleHero['show-collapsible'] === true) {
-                    return (<button className="buy">Buy</button>)
+                    return (<button className="buy" onClick={() => {addToCartClick()}}>Buy</button>)
                 }
             })}
             

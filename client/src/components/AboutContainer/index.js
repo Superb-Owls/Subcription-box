@@ -46,6 +46,7 @@ function AboutContainer() {
     console.log('this is the staet', state)
     return (
         <>
+        <div className="divlet">
             {state.studentArray.map((student, comic, i) => {
 
                 if (student['show-collapsible']) {
@@ -68,10 +69,18 @@ function AboutContainer() {
                                 marginTop: '406px',
                             }}
                             >
-                                    
-                                    <h1>{comic.email}</h1>
-                                    <h1>{comic.github}</h1>
-                                    <h1>{comic.linkedin}</h1>
+                                   <div class="social-icons">
+                   
+                   <a href={comic.linkedURL}>
+                     <i class="fab fa-linkedin-in"></i>
+                   </a>
+                   <a href={comic.github}>
+                     <i class="fab fa-github"></i>
+                   </a>
+                   <a href={'mailto:' + comic.email}>
+                     <i class="far fa-envelope"></i>
+                   </a>
+                 </div>
                                 {state.descriptionIndex === i ? (<div style={{
                                     
                                     // height: "100%",
@@ -100,6 +109,7 @@ function AboutContainer() {
             })}
 
             {comics}
+            </div>
         </>
 
     )
