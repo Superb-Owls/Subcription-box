@@ -10,15 +10,15 @@ function Description() {
         <>
             <div className="descCont">
                 <Smallbox img={info[0].img}></Smallbox>
-                <Bigbox text={info[3].text}></Bigbox>
+                <Bigbox title={info[3].title} text={info[3].text}></Bigbox>
             </div>
             <div className="descCont">
-                <Bigbox text={info[4].text}></Bigbox>
+                <Bigbox title={info[4].title} text={info[4].text}></Bigbox>
                 <Smallbox img={info[1].img}></Smallbox>
             </div>
             <div className="descCont">
                 <Smallbox img={info[2].img}></Smallbox>
-                <Bigbox text={info[5].text}></Bigbox>
+                <Bigbox title={info[5].title} text={info[5].text}></Bigbox>
             </div>
 
         </>

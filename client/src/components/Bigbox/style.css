@@ -1,21 +1,20 @@
-/* .bigtext{
-    height: auto;
-    width: 72.11%;
-    border: white solid 3px;
-    background-color: olive;
-    display: inline-block;
-    font-size: 45px;
-    font-family: 'Permanent Marker';
-    overflow-wrap: break-word;
-} */
-.bigtext{
+.bigboxwrapper{
     flex-grow: 2;
     height: auto;
     width: 72.11%;
     background-image: linear-gradient(to right, red , yellow);
-    font-size: 45px;
-    font-family: 'Permanent Marker';
-    border: white solid 3px;
+    
+}
+
+.bigtext{
     overflow-wrap: break-word;
-    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 30px;    
+}
+
+.bigtitle{
+    font-family: 'Permanent Marker';
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
 }
