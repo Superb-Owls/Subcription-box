@@ -1,0 +1,29 @@
+.signupwrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo text logo2";
+}
+.signuplogo{
+    grid-area: logo;
+}
+.signuptitle{
+    font-family: "Permanent Marker";
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+.signupbody{
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.signuptext{
+    grid-area: text;
+
+}
+.signuplogo2{
+    grid-area: logo2;
+
+}

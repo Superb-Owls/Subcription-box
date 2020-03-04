@@ -1,0 +1,24 @@
+.signuplogo > img{
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+.signuplogo2 > img{
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+.signuplink:link, .signuplink:visited{
+    background-color: maroon;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 29%;
+    margin-top: 10%;
+}
+  
+  .signuplink:hover, .signuplink:active {
+    background-color: maroon;
+  }
