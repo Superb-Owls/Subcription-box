@@ -28,8 +28,6 @@ function Tiers(props) {
                     <div className="footlogo">
 
                         <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200" alt="HeroBox"></img>
-
-
                     </div>
                     <div className="footlinks2">
                         <a href="/LoginOrSignUp">LOGIN</a>

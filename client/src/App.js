@@ -73,7 +73,6 @@ function App() {
 
               <Route exact path="/Test" component={Test} />
 
-
               <Route exact path="/Tiers" render={(props) => <Tiers {...props} setHero={setHero} />} />
               <Route exact path="/About" component={About} />
             </Switch>
