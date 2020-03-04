@@ -5,6 +5,7 @@ import axios from 'axios';
 import bcrypt from 'bcryptjs'
 import Login from './login';
 import { withRouter, useHistory } from 'react-router-dom';
+import './register.css'
 
 function Register(){
     const [email, setEmail] = useState('')
@@ -38,12 +39,12 @@ const redirect = (location)=>{
     console.log(username)
         return(
             <>
-
+<div className='regCtn'>
         <h1>Register</h1>
 <div className="registerContain">
 <div>
     <label for="name">Name</label>
-    <input type="text" id="name" name="username" onChange={onInputChange} required></input>
+    <input  id="regname" name="username" onChange={onInputChange} required></input>
 </div>
 
 <div>
@@ -54,10 +55,12 @@ const redirect = (location)=>{
     <label for="password">password</label>
     <input type="password" id="password" name="password" onChange={onInputChange} required></input>
 </div>
-<button onClick={newSubmit}>Register</button>
+<button className="regbtn" onClick={newSubmit}>Register</button>
+<button className="regbtn"><a href='/login'>Login</a></button>
 </div>
-<a href="/login">Login</a>
+{/* <a href="/login">Login</a> */}
 <br></br>
+</div>
         </>
         )
     

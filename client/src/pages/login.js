@@ -2,6 +2,7 @@ import React, { Component, useContext, useEffect, useState } from 'react';
 import axios from 'axios'
 import LoginContext from '../utils/loginContext'
 import {withRouter, useHistory } from 'react-router-dom';
+import './login.css'
 
 function Login(){
     const [email, setEmail] = useState('');
@@ -32,6 +33,8 @@ function Login(){
 
     return(
         <>
+        <div className="logWrap">
+        <div className='logCtn'>
         <h1>Login</h1>
 
 <div className="loginContain">
@@ -43,9 +46,11 @@ function Login(){
     <label for="password">password</label>
     <input type="password" id="password" name="password" onChange={onInputChange} required></input>
 </div>
-<button onClick={newSubmit}>Login</button>
+<button className='logBtn' onClick={newSubmit}>Login</button>
+<button className='logBtn'><a href='/register'>Register</a></button>
 </div>
-<a href="/register">Register</a>
+</div>  
+</div>
     </>
     )
 }
