@@ -18,6 +18,7 @@ function Tiers(props) {
 
     return (
         <>
+
             <div className="container-tiers">
                 <div className="titlet">CHOOSE YOUR HEROES</div>
                 <div className="tier1"></div>
@@ -25,7 +26,10 @@ function Tiers(props) {
                 <TiersContainer setHero={props.setHero} />
                 <div className="footerwrapper">
                     <div className="footlogo">
+
                         <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200" alt="HeroBox"></img>
+
+
                     </div>
                     <div className="footlinks2">
                         <a href="/LoginOrSignUp">LOGIN</a>
@@ -54,7 +58,9 @@ function Tiers(props) {
                     </div>
                 </div>
             </div>
+
         </>
+
     )
 }
 

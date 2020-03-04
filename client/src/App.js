@@ -58,6 +58,7 @@ function App() {
   }
   return (
     <>
+
       <LoginContext.Provider value={{ username, handleRegisterSubmit, handleLoginSubmit, isAuthenticated }}>
         <Router>
           <div>
@@ -71,6 +72,7 @@ function App() {
               <Route exact path="/Purchase" component={Purchase} />
 
               <Route exact path="/Test" component={Test} />
+
 
               <Route exact path="/Tiers" render={(props) => <Tiers {...props} setHero={setHero} />} />
               <Route exact path="/About" component={About} />
