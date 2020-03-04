@@ -1,5 +1,6 @@
 
 import React, { useMemo } from "react";
+import './style.css'
 
 import {
   useStripe,

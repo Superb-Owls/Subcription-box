@@ -9,7 +9,7 @@ function OrderTotal(props) {
                 <div className="subtotal">Subtotal: $</div>
                 <div className="estShipping">Estimated Shipping: $</div>
                 <div className="salesTax">Sales Tax: $</div>
-                <div className="total">Total: $</div>
+                <div className="ordertotal">Total: $</div>
                 <button onClick={() => { props.setPurchase(true) }}>Place Your Order</button>
             </div>
         </>

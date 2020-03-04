@@ -1,7 +1,8 @@
 .paymentWrapper{
     display: grid;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, red, yellow);
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -12,23 +13,23 @@
 }
 .shipping{
     grid-area: shipping;
-    background-color: navajowhite;
+    border: white solid 3px;
 }
 .billing{
     grid-area: billing;
-    background-color: saddlebrown;
+    border: white solid 3px;
 }
 .cc{
     grid-area: cc;
-    background-color: deeppink;
+    border: white solid 3px;
 }
 .order{
     grid-area: order;
-    background-color: darkcyan;
+    border: white solid 3px;
 }
 .total{
     grid-area: total;
-    background-color: mediumpurple;
+    border: white solid 3px;
 }
 .footerwrapper{
     grid-area: footer;
