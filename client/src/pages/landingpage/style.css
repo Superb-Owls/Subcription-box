@@ -11,7 +11,7 @@
 }
 .pic1:hover img,
 .pic1:focus img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .logolanding{
     background-image: url("https://i.imgur.com/1Cug7mw.jpg?1");
@@ -22,7 +22,7 @@
 }
 .logolanding:hover img,
 .logolanding:focus img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .pic2{
@@ -39,7 +39,7 @@
 
 .pic2:hover img,
 .pic2:focus img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .titlelanding{
     font-size: 70px;

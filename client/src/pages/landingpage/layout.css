@@ -3,14 +3,16 @@
     height: 100vh;
     width: 100vw;
     grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
-    grid-template-rows: 30% 30% 100% 103% 50% 25%;
+    grid-template-rows: 30% 30% 100% 120% 50% 37% 25%;
     grid-template-areas: 
       "pic1 logo logo logo pic2"
       "pic1 logo logo logo pic2"
       "tag tag tag tag tag"
       "desc desc desc desc desc"
       "test1 test1 dp test2 test2"
+      "signup signup signup signup signup"
       "footer footer footer footer footer"
+      
       
   }
   .pic1{
@@ -49,12 +51,18 @@
   }
   .testimonial2{
     grid-area: test2;
-    background-color: khaki;
     border: white solid 3px;
 }
   .description{
       grid-area: desc;
+      padding: 100px;
+      background-color: white;
+      /* background-image: url("https://i.imgur.com/sVySTK4.jpg"); */
+      border: white solid 3px;
       
+  }
+  .signup{
+      grid-area: signup;
   }
   .footerwrapper{
     grid-area: footer;
