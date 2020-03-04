@@ -25,7 +25,7 @@ function Tiers(props) {
                 <TiersContainer setHero={props.setHero} />
                 <div className="footerwrapper">
                     <div className="footlogo">
-                        <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200"></img>
+                        <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200" alt="HeroBox"></img>
                     </div>
                     <div className="footlinks2">
                         <a href="/LoginOrSignUp">LOGIN</a>
@@ -78,4 +78,4 @@ export default Tiers;
 // }
 
 
-{/* <HeroCard shadow={element["shadow-image"]} gif={element["gif"]} key={"box-" + element.name} name={element.name} /> */ }
+//  <HeroCard shadow={element["shadow-image"]} gif={element["gif"]} key={"box-" + element.name} name={element.name} />
