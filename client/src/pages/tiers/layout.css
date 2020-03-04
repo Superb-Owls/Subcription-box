@@ -3,23 +3,24 @@
     height: 100vh;
     width: 100vw;
     /* background-image: linear-gradient(to bottom right, red, maroon); */
-    background-image: url("https://www.psdgraphics.com/file/halftone-pattern.gif");
+    background-image: url("https://i.imgur.com/Tflb4xP.jpg");
     background-size: cover;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10% 20% 35% 35% 25%;
+    grid-template-rows: 9% 20% 35% 35% 25%;
     grid-template-areas: 
-      "title title title title title title"
+      "titlet titlet titlet titlet titlet titlet"
       "tier1 tier1 tier1 tier2 tier2 tier2"
       "hero1 hero2 hero3 hero4 hero5 hero6"
       "comic1 comic2 comic3 comic4 comic5 buy"
       "footer footer footer footer footer footer";
       
   }
-  .title{
-      grid-area: title;
-      background-color: green;
+  .titlet{
+      grid-area: titlet;
       text-align: center;
-      font-size: 30px;
+      font-size: 40px;
+      font-family: 'Permanent Marker';
+      border: white solid 5px;
   }
   .tier1{
       grid-area: tier1;

@@ -21,6 +21,7 @@
 .social-icons {
     box-sizing: border-box;
     display: block;
+    width: 101%;
     background-color: gray;
   }
   

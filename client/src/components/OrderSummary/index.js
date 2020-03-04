@@ -30,9 +30,6 @@ function OrderSummary(props) {
                         {props.info.billing.city + ", " + props.info.billing.state + " " + props.info.billing.zip}
                     </div>
                 </div>
-                <div className="sumCc">
-                    Credit Card:
-                </div>
                 <div className="sumHero">
                     Heroes Purchased:
                 </div>

@@ -10,18 +10,20 @@ function LandingPage() {
         <>
             <div className="container-land">
                 <div className="pic1">
+                    <img src="https://i.imgur.com/ylvGZdJ.png"></img>
                 </div>
                 <div className="logolanding">
-                    <img src="https://i.imgur.com/SyJcxQk.png">
-                    </img>
+                    <img src="https://i.imgur.com/SyJcxQk.png"></img>
                 </div>
                 <div className="tagline">
-                    <p>All your favorite heroes <br /> delivered right to your door</p>
+                    <p>All your favorite Marvel comics <br /> delivered right to your door</p>
                     <img src="https://i.imgur.com/DjjRlwq.png">
 
                     </img>
                 </div>
-                <div className="pic2">PIC2</div>
+                <div className="pic2">
+                    <img src="https://i.imgur.com/xgTah3d.png"></img>
+                </div>
 
                 <div className="description">
                     <Description />
@@ -35,6 +37,7 @@ function LandingPage() {
                         speechtext2={testinfo[0].speechtext2}
                         speechtext3={testinfo[0].speechtext3} />
                 </div>
+                <div className="dp"></div>
                 <div className="testimonial2">
                     <Testimonial
                         img={testinfo[1].img}

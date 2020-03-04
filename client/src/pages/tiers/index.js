@@ -12,50 +12,53 @@ function Tiers(props) {
 
     // function clickHero(e){
     //     return(
-        
+
     //     )
     // }
 
     return (
         <>
-        <div className="container-tiers">
-            <div className="title">TITLE: CHOOSE YOUR TIER</div>
-            <div className="tier1"></div>
-            <div className="tier2"></div>
 
-            <TiersContainer setHero={props.setHero} />
-            <div className="footerwrapper">
-                <div className="footlogo">
-                    <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200"></img>
+            <div className="container-tiers">
+                <div className="titlet">CHOOSE YOUR HEROES</div>
+                <div className="tier1"></div>
+                <div className="tier2"></div>
+                <TiersContainer setHero={props.setHero} />
+                <div className="footerwrapper">
+                    <div className="footlogo">
+                        <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200"></img>
+
+                    </div>
+                    <div className="footlinks2">
+                        <a href="/LoginOrSignUp">LOGIN</a>
+                        <br />
+                        <a href="/Tiers">SUBSCRIPTIONS</a>
+                        <br />
+                        <a href="/About">ABOUT</a>
+                        <br />
+                        <a href="/PrivacyPolicy">PRIVACY POLICY</a>
+                        <br />
+                        <a href="https://github.com/Superb-Owls/Subscription-box">GITHUB</a>
+                        <br />
+                        <a href="/Sitemap">SITEMAP</a>
+                        <br />
+                        <br />
+                        © HEROBOX 2020
+                    </div>
+                    <div className="footlinks1">
+                        THIS IS A STUDENT PROJECT, NOT AN ACTUAL E-COMMERCE SITE.
+                        <br />
+                        <br />
+                        PLEASE DO NOT ENTER IN YOUR CREDIT CARD INFORMATION.
+                        <br />
+                        <br />
+                        NO ACTUAL SERVICE WILL BE PROVIDED.
+                    </div>
                 </div>
-                <div className="footlinks2">
-                    <a href="/LoginOrSignUp">LOGIN</a>
-                    <br />
-                    <a href="/Tiers">SUBSCRIPTIONS</a>
-                    <br />
-                    <a href="/About">ABOUT</a>
-                    <br />
-                    <a href="/PrivacyPolicy">PRIVACY POLICY</a>
-                    <br />
-                    <a href="https://github.com/Superb-Owls/Subscription-box">GITHUB</a>
-                    <br />
-                    <a href="/Sitemap">SITEMAP</a>
-                    <br />
-                    <br />
-                    © HEROBOX 2020
-                    </div>
-                <div className="footlinks1">
-                    THIS IS A STUDENT PROJECT, NOT AN ACTUAL E-COMMERCE SITE.
-                        <br />
-                    <br />
-                    PLEASE DO NOT ENTER IN YOUR CREDIT CARD INFORMATION.
-                        <br />
-                    <br />
-                    NO ACTUAL SERVICE WILL BE PROVIDED.
-                    </div>
             </div>
-        </div>
-            </>
+
+        </>
+
     )
 }
 

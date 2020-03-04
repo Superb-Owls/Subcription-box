@@ -12,9 +12,10 @@
     flex-grow: 2;
     height: auto;
     width: 72.11%;
-    background-color: olive;
+    background-image: linear-gradient(to right, red , yellow);
     font-size: 45px;
     font-family: 'Permanent Marker';
     border: white solid 3px;
     overflow-wrap: break-word;
+    padding: 10px;
 }
