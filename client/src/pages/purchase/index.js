@@ -15,6 +15,7 @@ import OrderTotal from '../../components/OrderTotal'
 const stripePromise = loadStripe("pk_test_Pn2QWutVhjdDrcFaKWDoM5DJ00ZLEeus2G");
 
 function Purchase(props) {
+console.log('THIS IS THE PROPS !!!!!!!!!!!!!', props);
 
     const [state, setState] = useState({
         shipping: {
@@ -52,7 +53,6 @@ function Purchase(props) {
     }
 
 
-    console.log('this is our state!!!', state);
 
     return (
         <div className="paymentWrapper">
@@ -72,11 +72,11 @@ function Purchase(props) {
             </div>
             <div className="order">
                 <PaymentTitle name={data[3].title} />
-                <OrderSummary info={state} />
+                <OrderSummary comicsArray={props.selectedHero.comicsToBuy} info={state} />
             </div>
             <div className="total">
                 <PaymentTitle />
-                <OrderTotal purchase={purchase} setPurchase={setPurchase} />
+                <OrderTotal comicsArray={props.selectedHero.comicsToBuy} purchase={purchase} setPurchase={setPurchase} />
             </div>
             <div className="footerwrapper">
                 <div className="footlogo">

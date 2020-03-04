@@ -3,7 +3,7 @@
         "index": 1,
         "name": "Spiderman",
         "shadowimage": "https://via.placeholder.com/150",
-        
+        "gif": "https://via.placeholder.com/150/0000FF/808080 ?Text=Digital.com",
         "grid-name": "hero1",
         "show-collapsible": false,
         "comics": [

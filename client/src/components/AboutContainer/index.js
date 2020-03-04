@@ -80,6 +80,11 @@ function AboutContainer() {
                    <a href={'mailto:' + comic.email}>
                      <i class="far fa-envelope"></i>
                    </a>
+                   <div id='student-bio'>
+                       <p>
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos consequuntur ad harum veniam? Quisquam, corrupti veniam omnis maiores cum autem? Accusamus aperiam qui eveniet eius voluptatum reiciendis, ullam recusandae?
+                       </p>
+                   </div>
                  </div>
                                 {state.descriptionIndex === i ? (<div style={{
                                     
