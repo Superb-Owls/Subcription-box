@@ -17,11 +17,7 @@ import axios from 'axios'
 
 
 function App() {
-<<<<<<< HEAD
   const [selectedHero, setHero ] = useState({comicsToBuy: []})
-=======
-  const [selectedHero, setHero] = useState('')
->>>>>>> master
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -32,15 +28,6 @@ function App() {
     setUsername(newName);
     setEmail(email);
     setPassword(password);
-<<<<<<< HEAD
-    axios.post('api/register', {name: newName, email: email, password: password})
-    .then((response)=>{
-      if(response.status === 200){
-        var target = "login"
-        cb(target)
-      }
-    })
-=======
     axios.post('api/register', { name: newName, email: email, password: password })
       .then((response) => {
         if (response.status === 200) {
@@ -49,13 +36,11 @@ function App() {
           cb(target)
         }
       })
->>>>>>> master
   }
 
   function handleLoginSubmit(logEmail, logPassword, call) {
     setEmail(logEmail);
     setPassword(logPassword);
-<<<<<<< HEAD
     
     axios.post('api/login', {email: logEmail, password: logPassword})
     .then((response)=>{
@@ -90,45 +75,6 @@ function App() {
       </div>
     </Router>
     </LoginContext.Provider>
-=======
-
-    axios.post('api/login', { email: logEmail, password: logPassword })
-      .then((response) => {
-        if (response.status === 200) {
-          // setIsAuth(true)
-          var target = ""
-          call(target)
-          isAuthenticated = true
-          console.log(username, email, password, isAuthenticated)
-          console.log(LoginContext)
-        }
-
-      })
-  }
-  return (
-    <>
-
-      <LoginContext.Provider value={{ username, handleRegisterSubmit, handleLoginSubmit, isAuthenticated }}>
-        <Router>
-          <div>
-            <Navbar selectedHero={selectedHero}></Navbar>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/Login" component={Login} />
-              <Route exact path="/Register" component={Register} />
-              <Route exact path="/Personalized" component={PersonalizedHomePage} />
-              <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} />
-              <Route exact path="/Purchase" component={Purchase} />
-
-              <Route exact path="/Test" component={Test} />
-
-              <Route exact path="/Tiers" render={(props) => <Tiers {...props} setHero={setHero} />} />
-              <Route exact path="/About" component={About} />
-            </Switch>
-          </div>
-        </Router>
-      </LoginContext.Provider>
->>>>>>> master
     </>
   )
 }

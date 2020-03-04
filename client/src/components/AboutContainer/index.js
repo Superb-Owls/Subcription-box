@@ -81,9 +81,7 @@ function AboutContainer() {
                      <i class="far fa-envelope"></i>
                    </a>
                    <div id='student-bio'>
-                       <p>
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos consequuntur ad harum veniam? Quisquam, corrupti veniam omnis maiores cum autem? Accusamus aperiam qui eveniet eius voluptatum reiciendis, ullam recusandae?
-                       </p>
+                      
                    </div>
                  </div>
                                 {state.descriptionIndex === i ? (<div style={{
@@ -106,7 +104,9 @@ function AboutContainer() {
                 }
                 return (
                     <>
-                        <div key={i} className={`${student['grid-name']} studentCard`} onClick={(e) => { handleClick(e, student.name) }}>
+                        <div 
+                        //key={i} 
+                        className={`${student['grid-name']} studentCard`} onClick={(e) => { handleClick(e, student.name) }}>
                             <div className={"hoverImage hover" + `${student.index}`}></div>
                         </div>
                     </>
