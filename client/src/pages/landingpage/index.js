@@ -11,19 +11,19 @@ function LandingPage() {
         <>
             <div className="container-land">
                 <div className="pic1">
-                    <img src="https://i.imgur.com/ylvGZdJ.png"></img>
+                    <img src="https://i.imgur.com/ylvGZdJ.png" alt="SpiderMan"></img>
                 </div>
                 <div className="logolanding">
-                    <img src="https://i.imgur.com/SyJcxQk.png"></img>
+                    <img src="https://i.imgur.com/SyJcxQk.png" alt="HeroBox"></img>
                 </div>
                 <div className="tagline">
                     <p>All your favorite Marvel comics <br /> delivered right to your door</p>
-                    <img src="https://i.imgur.com/DjjRlwq.png">
+                    <img src="https://i.imgur.com/DjjRlwq.png" alt="AllHeroes">
 
                     </img>
                 </div>
                 <div className="pic2">
-                    <img src="https://i.imgur.com/xgTah3d.png"></img>
+                    <img src="https://i.imgur.com/xgTah3d.png" alt="CaptainAmerica"></img>
                 </div>
 
                 <div className="description">
@@ -55,7 +55,7 @@ function LandingPage() {
                 </div>
                 <div className="footerwrapper">
                     <div className="footlogo">
-                        <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200"></img>
+                        <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200" alt="heroes"></img>
                     </div>
                     <div className="footlinks2">
                         <a href="/LoginOrSignUp">LOGIN</a>

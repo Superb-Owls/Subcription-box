@@ -40,10 +40,7 @@ const useOptions = () => {
 
 const PaymentForm = (props) => {
 
-
-  console.log('THESE r PROPS ********** payment form ********', props);
-
-
+  // console.log('THESE r PROPS ********** payment form ********', props);
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
@@ -54,15 +51,15 @@ const PaymentForm = (props) => {
       event.preventDefault()
     }
 
-    var response = fetch("http://localhost:3001/api/chargestripe").then(function (response) {
+    fetch("http://localhost:3001/api/chargestripe").then(function (response) {
       return response.json();
     }).then(function (responseJson) {
 
-      console.log('WE got this back fromt he BE!!!!!', responseJson);
+      // console.log('WE got this back fromt he BE!!!!!', responseJson);
       var clientSecret = responseJson.client_secret;
 
       const card = elements.getElement(CardNumberElement);
-      console.log('HERE IS NEW CARD!!!!! !!!!!!!!!', card)
+      // console.log('HERE IS NEW CARD!!!!! !!!!!!!!!', card)
 
       // Call stripe.confirmCardPayment() with the client secret.
       stripe.confirmCardPayment(
@@ -71,7 +68,7 @@ const PaymentForm = (props) => {
           payment_method: { card: card },
         }
       ).then(function (result) {
-        console.log('GOT this back from the CONFIRM stripe!!!', result)
+        // console.log('GOT this back from the CONFIRM stripe!!!', result)
         if (result.error) {
           // Display error.message in your UI.
           alert("ERROR")
@@ -97,16 +94,16 @@ const PaymentForm = (props) => {
         <CardNumberElement
           options={options}
           onReady={() => {
-            console.log("CardNumberElement [ready]");
+            // console.log("CardNumberElement [ready]");
           }}
           onChange={event => {
-            console.log("CardNumberElement [change]", event);
+            // console.log("CardNumberElement [change]", event);
           }}
           onBlur={() => {
-            console.log("CardNumberElement [blur]");
+            // console.log("CardNumberElement [blur]");
           }}
           onFocus={() => {
-            console.log("CardNumberElement [focus]");
+            // console.log("CardNumberElement [focus]");
           }}
         />
       </label>
@@ -115,16 +112,16 @@ const PaymentForm = (props) => {
         <CardExpiryElement
           options={options}
           onReady={() => {
-            console.log("CardNumberElement [ready]");
+            // console.log("CardNumberElement [ready]");
           }}
           onChange={event => {
-            console.log("CardNumberElement [change]", event);
+            // console.log("CardNumberElement [change]", event);
           }}
           onBlur={() => {
-            console.log("CardNumberElement [blur]");
+            // console.log("CardNumberElement [blur]");
           }}
           onFocus={() => {
-            console.log("CardNumberElement [focus]");
+            // console.log("CardNumberElement [focus]");
           }}
         />
       </label>
@@ -133,23 +130,23 @@ const PaymentForm = (props) => {
         <CardCvcElement
           options={options}
           onReady={() => {
-            console.log("CardNumberElement [ready]");
+            // console.log("CardNumberElement [ready]");
           }}
           onChange={event => {
-            console.log("CardNumberElement [change]", event);
+            // console.log("CardNumberElement [change]", event);
           }}
           onBlur={() => {
-            console.log("CardNumberElement [blur]");
+            // console.log("CardNumberElement [blur]");
           }}
           onFocus={() => {
-            console.log("CardNumberElement [focus]");
+            // console.log("CardNumberElement [focus]");
           }}
         />
       </label>
 
-      <button type="submit" disabled={!stripe} data-secret="{{ client_secret }}">
+      {/* <button type="submit" disabled={!stripe} data-secret="{{ client_secret }}">
         Pay
-      </button>
+      </button> */}
     </form>
 
   );

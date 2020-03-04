@@ -6,7 +6,7 @@ function Smallbox(props) {
     return (
         <>
             <div className="smallimg">
-                <img src={img}></img>
+                <img src={img} alt="small_img"></img>
             </div>
         </>
     )
