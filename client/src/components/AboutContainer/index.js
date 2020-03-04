@@ -80,6 +80,9 @@ function AboutContainer() {
                    <a href={'mailto:' + comic.email}>
                      <i class="far fa-envelope"></i>
                    </a>
+                   <div id='student-bio'>
+                      
+                   </div>
                  </div>
                                 {state.descriptionIndex === i ? (<div style={{
                                     
@@ -101,7 +104,9 @@ function AboutContainer() {
                 }
                 return (
                     <>
-                        <div key={i} className={`${student['grid-name']} studentCard`} onClick={(e) => { handleClick(e, student.name) }}>
+                        <div 
+                        //key={i} 
+                        className={`${student['grid-name']} studentCard`} onClick={(e) => { handleClick(e, student.name) }}>
                             <div className={"hoverImage hover" + `${student.index}`}></div>
                         </div>
                     </>

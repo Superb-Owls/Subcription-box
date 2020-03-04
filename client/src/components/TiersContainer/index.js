@@ -83,9 +83,13 @@ function TiersContainer(props) {
 
         state.herosArray.map(function (singleHero) { // changed to forEach
             console.log('single hero', singleHero['show-collapsible'])
-            if (singleHero['show-collapsible']) {
-                console.log('hellooo!!! this is our match', singleHero.name)
-                props.setHero(singleHero.name)
+            if(singleHero['show-collapsible']) {
+                var newHeroToBuy = {name: singleHero.name, price: 20}
+                var newState = props.selectedHero
+                newState.comicsToBuy.push(newHeroToBuy)
+                
+                props.setHero({...props.selectedHero, comicsToBuy: newState.comicsToBuy})
+                
             }
         })
 

@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css'
+import {withRouter} from 'react-router-dom'
 
 function Navbar(props) {
 
@@ -11,7 +12,6 @@ function Navbar(props) {
         document.getElementById("mySidebar").style.width = "0";
         document.getElementById("root").style.marginRight = "0";
     }
-    console.log('PROPS IN THE NAV BAR %%%%%%%%%%%%%%%%%%%%%', props)
     return (
         <>
             <div className="topnav">
@@ -32,13 +32,19 @@ function Navbar(props) {
                 <div className="closebtn" onClick={closeNav} href="javascript:void(0)">&times;</div>
 
                 {/* <div>Your selections</div> */}
-                <h1>You have selected: {props.selectedHero} for $20</h1>
-                <a href="/Purchase" >Buy Now!</a>
-                {/* <button className='checkoutBtn'>Buy Now!</button> */}
+    {props.selectedHero.comicsToBuy.map((eachComic)=>{
+        return (
+            <div>
+        <h1>{eachComic.name}</h1> 
+        <h4>${eachComic.price}</h4>
+        </div>
+        )
+    })}
+    <button className='checkoutBtn' onClick={() => {props.history.push('/Purchase')}}>Buy Now!</button>
                 {/* <div>Go to your cart</div> */}
             </div>
         </>
     )
 }
 
-export default Navbar;
+export default withRouter (Navbar);
