@@ -18,10 +18,11 @@ function Navbar(props) {
                 <a className="active" href="/">
                     HERO BOX
                 </a>
-                <a className="openbtn" onClick={openNav} style={{ float: "right" }}>
-                    <i className="fa fa-shopping-cart"></i>
 
-                </a>
+                <button className="openbtn" onClick={openNav} style={{ float: "right" }}>
+                    <i className="fa fa-shopping-cart"></i>
+                </button>
+
                 <a href="login" style={{ float: "right" }}>LOGIN</a>
                 <a href="/tiers" style={{ float: "right" }}>SUBSCRIPTIONS</a>
                 <a href="/about" style={{ float: "right" }}>ABOUT US</a>
@@ -31,8 +32,9 @@ function Navbar(props) {
                 <div className="closebtn" onClick={closeNav} href="javascript:void(0)">&times;</div>
 
                 {/* <div>Your selections</div> */}
-    <h1>You have selected: {props.selectedHero} for $20</h1>
-    <button className='checkoutBtn'>Buy Now!</button>
+                <h1>You have selected: {props.selectedHero} for $20</h1>
+                <a href="/Purchase" >Buy Now!</a>
+                {/* <button className='checkoutBtn'>Buy Now!</button> */}
                 {/* <div>Go to your cart</div> */}
             </div>
         </>

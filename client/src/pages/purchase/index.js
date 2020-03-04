@@ -14,7 +14,7 @@ import OrderTotal from '../../components/OrderTotal'
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe("pk_test_Pn2QWutVhjdDrcFaKWDoM5DJ00ZLEeus2G");
 
-function Purchase() {
+function Purchase(props) {
 
     const [state, setState] = useState({
         shipping: {
@@ -80,7 +80,7 @@ function Purchase() {
             </div>
             <div className="footerwrapper">
                 <div className="footlogo">
-                    <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200"></img>
+                    <img src="https://i.imgur.com/SyJcxQk.png" height="200" width="200" alt="heroes"></img>
                 </div>
                 <div className="footlinks2">
                     <a href="/LoginOrSignUp">LOGIN</a>

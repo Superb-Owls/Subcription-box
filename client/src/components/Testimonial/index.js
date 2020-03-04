@@ -12,7 +12,7 @@ function Testimonial(props) {
     return (
         <>
             <div className="testwrapper">
-                <img className="test" src={img}></img>
+                <img className="test" src={img} alt="pic"></img>
                 <p className="quote">{text1}<br />{text2}<br />{text3}</p>
                 <p className="name">{name}</p>
             </div>

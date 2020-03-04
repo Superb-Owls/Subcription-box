@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import LoginForm from '../../components/LoginForm'
-import SignUpForm from "../../components/SignUpForm"
+// import LoginForm from '../../components/LoginForm'
+// import SignUpForm from "../../components/SignUpForm"
 import Button from "../../components/Button"
-import PaymentForm from "../../components/PaymentForm";
+// import PaymentForm from "../../components/PaymentForm";
 import { marvelHeroes } from "../../utils/marvelRd2";
 
 class Test extends Component {

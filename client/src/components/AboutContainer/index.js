@@ -46,7 +46,7 @@ function AboutContainer() {
     console.log('this is the staet', state)
     return (
         <>
-        <div className="divlet">
+        <div className="student-card-container">
             {state.studentArray.map((student, comic, i) => {
 
                 if (student['show-collapsible']) {
@@ -101,15 +101,15 @@ function AboutContainer() {
                 }
                 return (
                     <>
-                        <div key={i} className={`${student['grid-name']} heroCard`} onClick={(e) => { handleClick(e, student.name) }}>
+                        <div key={i} className={`${student['grid-name']} studentCard`} onClick={(e) => { handleClick(e, student.name) }}>
                             <div className={"hoverImage hover" + `${student.index}`}></div>
                         </div>
                     </>
                 )
             })}
-
+</div>
             {comics}
-            </div>
+            
         </>
 
     )

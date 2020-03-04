@@ -7,11 +7,11 @@ import Comics from './Comics';
 // import '../../pages/tiers/layout.css'
 
 
-var realData = new Array(6, null)
+var realData = [null, null, null, null, null, null];
 
 function TiersContainer(props) {
 
-    const [state, setState] = useState({ herosArray: data, realData: new Array(6, null), firstName: '', lastName: '', descriptionIndex: '' });
+    const [state, setState] = useState({ herosArray: data, realData: realData, firstName: '', lastName: '', descriptionIndex: '' });
 
     useEffect(() => {
         var thor = 1009664
@@ -20,19 +20,19 @@ function TiersContainer(props) {
         var spiderMan = 1009610
         var hulk = 1009351
         var captainAmerica = 1009220
-        
+
         marvelHeroes(thor).then((res) => {
             // console.log(res.images)
-            
+
             realData[3] = Comics(res)
             setState({ ...state, realData: realData })
             // console.log(realData[2]);
 
-           
+
             // console.log("This is Thor:", thorData)
         })
         marvelHeroes(wolverine).then((res) => {
-            realData[6] = Comics(res) 
+            realData[6] = Comics(res)
             // console.log(realData[5])           
             // console.log("This is wolverine:", wolverineData)
         })
@@ -68,7 +68,7 @@ function TiersContainer(props) {
 
 
     // console.log(realData.length);
-    
+
 
     // const [dataState, setDatastate] = useState({
     //     title: "",
@@ -76,21 +76,21 @@ function TiersContainer(props) {
     //     date: "",
     //     pictures: ""
     // })
-    
+
     function addToCartClick() {
         document.getElementById("mySidebar").style.width = "250px";
         document.getElementById("root").style.marginRight = "250px";
 
-        state.herosArray.map(function(singleHero){
+        state.herosArray.map(function (singleHero) { // changed to forEach
             console.log('single hero', singleHero['show-collapsible'])
-            if(singleHero['show-collapsible']) {
+            if (singleHero['show-collapsible']) {
                 console.log('hellooo!!! this is our match', singleHero.name)
                 props.setHero(singleHero.name)
             }
         })
 
     }
-    
+
 
     function showDescription(i) {
         // console.log('SHOW DESCRIPTION')
@@ -127,7 +127,7 @@ function TiersContainer(props) {
     let comics = []
     // console.log('this is the state', state)
     // console.log('this is the real data!!!!', realData)
-    
+
     return (
         <>
             {state.realData.length > 4 ? state.herosArray.map((hero, comic, i) => {
@@ -174,31 +174,31 @@ function TiersContainer(props) {
                         )
 
                         comics.push(html)
-                    })                   
+                    })
                     //return// <button className="buy">Buy</button>
                 }
-                
+
                 return (
                     <>
                         <div key={i} className={`${hero['grid-name']} heroCard`} onClick={(e) => { handleClick(e, hero.name) }}>
                             <div className={"hoverImage hover" + `${hero.index}`}></div>
-                        {/* <div className={`${buy["grid-name"]}`}><Button/></div> */}
+                            {/* <div className={`${buy["grid-name"]}`}><Button/></div> */}
                         </div>
                     </>
                 )
             }) : (<div class="loader"></div>)}
 
             {comics}
-            {state.herosArray.map((singleHero)=> {
-                if(singleHero['show-collapsible'] === true) {
-                    return (<button className="buy" onClick={() => {addToCartClick()}}>Buy Hero</button>)
+            {state.herosArray.map((singleHero) => {
+                if (singleHero['show-collapsible'] === true) {
+                    return (<a className="buy" onClick={() => { addToCartClick() }}>Buy</a>)
                 }
             })}
-            
+
         </>
-    
+
     )
-    
+
 }
 
 export default TiersContainer;
