@@ -4,12 +4,24 @@
 }
 
 .studentCard{
-    height: 500px;
+    
+  height: 343px;
+  width: 270px;
+  background-size: cover;
+}
+
+.student-card-container{
+  display: inline-flex;
+}
+
+.heroCard{
+ 
 }
 
 .social-icons {
     box-sizing: border-box;
     display: block;
+    background-color: gray;
   }
   
   .social-icons a {

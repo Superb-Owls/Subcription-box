@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/Personalized" component={PersonalizedHomePage} />
           <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} />
           <Route exact path="/Purchase" component={Purchase} />
-
+          
           <Route exact path="/Test" component={Test} />
 
           <Route exact path="/Tiers" render={(props) => <Tiers {...props} setHero={setHero} />} />

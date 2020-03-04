@@ -14,7 +14,7 @@ import OrderTotal from '../../components/OrderTotal'
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe("pk_test_Pn2QWutVhjdDrcFaKWDoM5DJ00ZLEeus2G");
 
-function Purchase() {
+function Purchase(props) {
 
     const [state, setState] = useState({
         shipping: {
