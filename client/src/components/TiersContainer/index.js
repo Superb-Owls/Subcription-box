@@ -145,16 +145,28 @@ function TiersContainer(props) {
                             }}>
 
                                 {state.descriptionIndex === i ? (<div style={{
-                                    backgroundColor: 'grey',
+                                    backgroundColor: 'black',
                                     height: "100%",
                                     width: '100%',
-                                    opacity: 0.4
+                                    opacity: 0.8,
+                                    position:"relative"
+                                    
                                 }}>
-                                    <h1 style={{
+                                    <div style={{
+                                        textAlign: "center",
                                         margin: '0px',
-                                        opacity: 1
+                                        opacity: 1,
+                                        position: "absolute",
+                                        top: "20%",
+                                        left: "50%",
+                                        height: "30%",
+                                        width: "50%",
+                                        margin: "-15% 0 0 -25%"
+                                        
 
-                                    }}>{comic.title}</h1>
+                                    }}><h5>Title:</h5> 
+                                    <h3>{comic.title}</h3></div>
+                                    
                                 </div>) : ''}
 
 
@@ -179,7 +191,7 @@ function TiersContainer(props) {
             {comics}
             {state.herosArray.map((singleHero)=> {
                 if(singleHero['show-collapsible'] === true) {
-                    return (<button className="buy" onClick={() => {addToCartClick()}}>Buy</button>)
+                    return (<button className="buy" onClick={() => {addToCartClick()}}>Buy Hero</button>)
                 }
             })}
             

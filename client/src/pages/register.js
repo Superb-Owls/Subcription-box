@@ -1,9 +1,9 @@
 // register new user page
 import React, {useEffect, useState, useContext} from 'react';
 import LoginContext from '../utils/loginContext'
-import axios from 'axios';
-import bcrypt from 'bcryptjs'
-import Login from './login';
+// import axios from 'axios';
+// import bcrypt from 'bcryptjs'
+// import Login from './login';
 import { withRouter, useHistory } from 'react-router-dom';
 
 function Register(){
