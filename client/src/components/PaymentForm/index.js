@@ -51,7 +51,7 @@ const PaymentForm = (props) => {
       event.preventDefault()
     }
 
-    fetch("http://localhost:3001/api/chargestripe").then(function (response) {
+    fetch("/api/chargestripe").then(function (response) {
       return response.json();
     }).then(function (responseJson) {
 
