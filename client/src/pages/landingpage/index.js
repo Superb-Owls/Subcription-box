@@ -4,6 +4,7 @@ import './style.css'
 import Testimonial from '../../components/Testimonial'
 import Description from '../../components/Description'
 import testinfo from './testimonialinfo.json'
+import Signup from '../../components/Signup'
 
 function LandingPage() {
     return (
@@ -48,6 +49,9 @@ function LandingPage() {
                         speechtext3={testinfo[1].speechtext3}
                     />
 
+                </div>
+                <div className="signup">
+                    <Signup />
                 </div>
                 <div className="footerwrapper">
                     <div className="footlogo">

@@ -1,7 +1,10 @@
 import React, { useContext, useState } from 'react'; //Component, useEffect are unused, deleted by ZG
 // import axios from 'axios'
 import LoginContext from '../utils/loginContext'
-import { useHistory } from 'react-router-dom';//withRouter is unused, deleted by ZG
+
+import { withRouter, useHistory } from 'react-router-dom';
+import './login.css'
+
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -31,20 +34,24 @@ function Login() {
 
     return (
         <>
-            <h1>Login</h1>
+            <div className="logWrap">
+                <div className='logCtn'>
+                    <h1>Login</h1>
 
-            <div className="loginContain">
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" onChange={onInputChange} required></input>
+                    <div className="loginContain">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" onChange={onInputChange} required></input>
+                        </div>
+                        <div>
+                            <label for="password">password</label>
+                            <input type="password" id="password" name="password" onChange={onInputChange} required></input>
+                        </div>
+                        <button className='logBtn' onClick={newSubmit}>Login</button>
+                        <button className='logBtn'><a href='/register'>Register</a></button>
+                    </div>
                 </div>
-                <div>
-                    <label for="password">password</label>
-                    <input type="password" id="password" name="password" onChange={onInputChange} required></input>
-                </div>
-                <button onClick={newSubmit}>Login</button>
             </div>
-            <a href="/register">Register</a>
         </>
     )
 }

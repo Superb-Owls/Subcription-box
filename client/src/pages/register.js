@@ -5,6 +5,7 @@ import LoginContext from '../utils/loginContext'
 // import bcrypt from 'bcryptjs'
 // import Login from './login';
 import { withRouter, useHistory } from 'react-router-dom';
+import './register.css'
 
 function Register() {
     const [email, setEmail] = useState('')
@@ -38,26 +39,28 @@ function Register() {
     console.log(username)
     return (
         <>
+            <div className='regCtn'>
+                <h1>Register</h1>
+                <div className="registerContain">
+                    <div>
+                        <label for="name">Name</label>
+                        <input id="regname" name="username" onChange={onInputChange} required></input>
+                    </div>
 
-            <h1>Register</h1>
-            <div className="registerContain">
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="username" onChange={onInputChange} required></input>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" onChange={onInputChange} required></input>
+                    </div>
+                    <div>
+                        <label for="password">password</label>
+                        <input type="password" id="password" name="password" onChange={onInputChange} required></input>
+                    </div>
+                    <button className="regbtn" onClick={newSubmit}>Register</button>
+                    <button className="regbtn"><a href='/login'>Login</a></button>
                 </div>
-
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" onChange={onInputChange} required></input>
-                </div>
-                <div>
-                    <label for="password">password</label>
-                    <input type="password" id="password" name="password" onChange={onInputChange} required></input>
-                </div>
-                <button onClick={newSubmit}>Register</button>
+                {/* <a href="/login">Login</a> */}
+                <br></br>
             </div>
-            <a href="/login">Login</a>
-            <br></br>
         </>
     )
 
