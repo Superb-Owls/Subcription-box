@@ -3,7 +3,7 @@
         "index": 1,
         "name": "Spiderman",
         "shadowimage": "https://via.placeholder.com/150",
-        "gif": "https://i.imgur.com/oLitMXo.gif",
+        
         "grid-name": "hero1",
         "show-collapsible": false,
         "comics": [
@@ -24,7 +24,7 @@
         "index": 2,
         "name": "Captain America",
         "shadowimage": "https://i.imgur.com/rVUq9ZY.jpg",
-        "gif": "https://i.imgur.com/xGIyJmK.gif",
+        
         "grid-name": "hero2",
         "show-collapsible": false,
         "comics": [
