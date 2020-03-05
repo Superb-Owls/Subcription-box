@@ -53,7 +53,7 @@ https://pacific-chamber-07789.herokuapp.com/
 * All you need to view this project is a web browser.
 
 ## Usage
-* Get a monthly supply of comic books
+* Get a monthly supply of comic books without the hassle of picking them up.
 
 ## Contact
 * Alex Bonner (alex.c.bonner@gmail.com)
@@ -76,3 +76,4 @@ https://pacific-chamber-07789.herokuapp.com/
 * Passport NPM packages
 * BcryptJS NPM packages
 * Imgur
+* Marvel-api-hash-generator
