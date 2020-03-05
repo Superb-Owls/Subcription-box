@@ -2,7 +2,7 @@
 
 ## About the project.
 
-Hero Box is subscription based e-commerce platform that allows users subscribe to monthly delivery of comic books based on a character of their choosing. Users can choose between six comic characters and upon clicking on a character, five comic books that the chosen character was in will populate. The user can then go through the options and click on the link to buy if interested. On clicking on the buy link, the comics are added to the cart and there is a checkout button which takes user to the payment page.
+Hero Box is subscription based e-commerce platform that allows users subscribe to monthly delivery of comic books based on a comic hero of their choosing. Users can choose between six comic heroes and upon clicking on a hero, five comic books that the chosen comic hero was in will populate. The user can then go through the options and click on the link to buy if interested. On clicking on the buy link, the comic are added to the cart and there is a checkout button which takes user to the payment page.
 
 
 The flow of the app is below:
