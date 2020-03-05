@@ -10,6 +10,26 @@
   background-size: cover;
 }
 
+.student1{
+  background-image: url('https://i.imgur.com/fgNE5am.jpg')
+}
+
+.student2{
+  background-image: url('https://i.imgur.com/oCxPySI.png')
+}
+
+.student3{
+  background-image: url('https://i.imgur.com/G2fOqNf.jpg?1');
+}
+
+.student4{
+  background-image: url('https://i.imgur.com/eH98nvS.jpg')
+}
+
+.student5{
+  background-image: url('https://i.imgur.com/S1RYyP1.png')
+}
+
 .student-card-container{
   display: inline-flex;
 }

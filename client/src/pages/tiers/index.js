@@ -23,7 +23,7 @@ function Tiers(props) {
                 <div className="titlet">CHOOSE YOUR HEROES</div>
                 <div className="tier1"></div>
                 <div className="tier2"></div>
-                <TiersContainer setHero={props.setHero} />
+                <TiersContainer selectedHero={props.selectedHero} setHero={props.setHero} />
                 <div className="footerwrapper">
                     <div className="footlogo">
 

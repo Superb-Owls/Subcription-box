@@ -13,9 +13,75 @@
     animation: spin 2s linear infinite;
   }
 
-  .Buy{
-    width: 214px;
-    height: 220px;
-    margin-top: 0px;
+  .buy{
+    width: 200px;
+    margin-top: 80px;
     grid-area: buy;
+    background-color: maroon;
+    border-radius: 10px;
   }
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .container-tiers{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        /* background-image: linear-gradient(to bottom right, red, maroon); */
+        /* background-image: url("https://i.imgur.com/Tflb4xP.jpg"); */
+        background-size: cover;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 15% 15% 15% 20% 25% 25% 35%;
+        grid-template-areas: 
+          "titlet titlet titlet titlet titlet titlet"
+          "tier1 tier1 tier1 tier1 tier1 tier1"
+          "tier2 tier2 tier2 tier2 tier2 tier2"
+          "hero1 hero2 hero3 hero4 hero5 hero6"
+          /* "hero4 hero4 hero5 hero5 hero6 hero6" */
+          "comic1 comic2 comic3 comic4 comic5 comic6"
+          "buy buy buy buy buy buy"
+          "footer footer footer footer footer footer";
+          
+      }
+
+      .tier1{
+          margin: 5px;
+          font-size: small;
+          width: 100%;
+          display: inline-block;
+          box-sizing: border-box;
+      }
+      .tier2{
+        margin: 5px;
+          font-size: small;
+          width: 100%;
+          display: inline-block;
+          box-sizing: border-box;
+      }
+      .titlet{
+          width: 100%;
+          display: inline-flex;
+          box-sizing: border-box;
+      }
+      .buy{
+          margin-top: 20px;
+          top: 10px;
+      }
+      .footerwrapper{
+        grid-area: footer;
+        display: grid;
+        align-items: center;
+        height: 100vh;
+        width: 100vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 30% 30% 30%;
+        grid-template-areas: 
+        "footlogo footlogo footlogo"
+        "links1 links1 links1"
+        "links2 links2 links2";
+      }
+      
+}

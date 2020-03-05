@@ -18,4 +18,5 @@
 .sumHero{
     grid-area: sumHero;
     padding: 15px;
+    margin-bottom: -266px;
 }

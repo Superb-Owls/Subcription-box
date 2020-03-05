@@ -17,13 +17,12 @@ import axios from 'axios'
 
 
 function App() {
-  const [selectedHero, setHero] = useState('')
+  const [selectedHero, setHero ] = useState({comicsToBuy: []})
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   // const [isAuth, setIsAuth] = useState(false)
   let isAuthenticated = ''
-  console.log(isAuthenticated)
 
   function handleRegisterSubmit(newName, email, password, cb) {
     setUsername(newName);
@@ -42,43 +41,40 @@ function App() {
   function handleLoginSubmit(logEmail, logPassword, call) {
     setEmail(logEmail);
     setPassword(logPassword);
-
-    axios.post('api/login', { email: logEmail, password: logPassword })
-      .then((response) => {
-        if (response.status === 200) {
-          // setIsAuth(true)
-          var target = ""
-          call(target)
-          isAuthenticated = true
-          console.log(username, email, password, isAuthenticated)
-          console.log(LoginContext)
-        }
-
-      })
+    
+    axios.post('api/login', {email: logEmail, password: logPassword})
+    .then((response)=>{
+      if(response.status === 200){
+        // setIsAuth(true)
+        var target = ""
+       call(target)
+       isAuthenticated = true
+      } 
+      
+    })
   }
   return (
     <>
+    <LoginContext.Provider value={{username, handleRegisterSubmit, handleLoginSubmit, isAuthenticated}}>
+    <Router>
+      <div>
+        <Navbar selectedHero={selectedHero}></Navbar>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Login" component={Login} />
+          <Route exact path="/Register" component={Register} />
+          <Route exact path="/Personalized" component={PersonalizedHomePage} />
+          <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} />
+          {/* <Route exact path="/Purchase" component={Purchase} /> */}
+          <Route exact path="/Purchase" render={(props) => <Purchase {...props} setHero={setHero} selectedHero={selectedHero}/>} />
+          <Route exact path="/Test" component={Test} />
 
-      <LoginContext.Provider value={{ username, handleRegisterSubmit, handleLoginSubmit, isAuthenticated }}>
-        <Router>
-          <div>
-            <Navbar selectedHero={selectedHero}></Navbar>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/Login" component={Login} />
-              <Route exact path="/Register" component={Register} />
-              <Route exact path="/Personalized" component={PersonalizedHomePage} />
-              <Route exact path="/PrivacyPolicy" component={PrivacyPolicy} />
-              <Route exact path="/Purchase" component={Purchase} />
-
-              <Route exact path="/Test" component={Test} />
-
-              <Route exact path="/Tiers" render={(props) => <Tiers {...props} setHero={setHero} />} />
-              <Route exact path="/About" component={About} />
-            </Switch>
-          </div>
-        </Router>
-      </LoginContext.Provider>
+          <Route exact path="/Tiers" render={(props) => <Tiers {...props} setHero={setHero} selectedHero={selectedHero}/>} />
+          <Route exact path="/About" component={About} />
+        </Switch>
+      </div>
+    </Router>
+    </LoginContext.Provider>
     </>
   )
 }
