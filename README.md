@@ -33,8 +33,11 @@ Once the credentials are passed to the back end during the registration and sign
 
 ## Payment
 
-The payment feature was added using Stripe NPM package, a generic payment information is also provided by stripe if user wants to try the payment feature.
-The generic card number is 4242 4242 4242 4242 4242
+Hero Box uses online payment processing app 'Stripe' which has special elements and PaymentIntents for dynamic authentication. Collecting payments on Hero Box consists of creating an object to track a payment, collecting card information, and submitting the payment to Stripe for processing. Stripe uses this object, PaymentIntent, to track and handle the states of the payment until it's completed.  Input field validation was already built in stripe, error message handling was implemented by our team. Special stripe elements ('CardNumberElement', 'CardExpiryElement', 'CardCvcElement') for React are used to get payment data from the client side. 
+
+If user is interested in trying the payment feature, Stripe provides a generic payment information:
+Card number: 4242 4242 4242 4242 4242.
+The security code, address and expiration date can be anything the user wants.
 
 ## Third party APIs and Databases
 
